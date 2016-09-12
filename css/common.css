@@ -1,8 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
 
-body,i,b, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div, dl, dt, dd, input { margin: 0; padding: 0; border: 0; font-size: 12px; font-family: '\65B0\5B8B\4F53', '\5B8B\4F53', Verdana; font-weight:normal; font-style:normal;}
-
+body,i,b, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div, dl, dt, dd, input,label { margin: 0; padding: 0; border: 0; font-size: 12px; font-family:'\5E7C\5706','\9ED1\4F53','\65B0\5B8B\4F53', '\5B8B\4F53', Verdana; font-weight:normal; font-style:normal;}
+a:hover{
+	text-decoration:none;
+}
 ul, ol { list-style-type: none; }
 select, input, img { vertical-align: middle; outline: none; }
 a { text-decoration: none;color:#000; }
