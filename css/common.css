@@ -1,18 +1,72 @@
 @charset "utf-8";
 /* CSS Document */
-
-body,i,b, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div, dl, dt, dd, input,label { margin: 0; padding: 0; border: 0; font-size: 12px; font-family:'\5E7C\5706','\9ED1\4F53','\65B0\5B8B\4F53', '\5B8B\4F53', Verdana; font-weight:normal; font-style:normal;}
-a:hover{
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+	margin:0;
+	padding:0;
+	border:0
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+	display:block
+}
+body {
+	line-height:1
+}
+ol,ul {
+	list-style:none
+}
+blockquote,q {
+	quotes:none
+}
+blockquote:before,blockquote:after,q:before,q:after {
+	content:'';
+	content:none
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0
+}
+:focus {
+	outline:0
+}
+h1,h2,h3,h4,h5,h6 {
+	font-weight:normal
+}
+.clearfix:before,.section:before,.nav ul:before {
+	content:"";
+	display:table
+}
+.clearfix:after,.section:after,.nav ul:after {
+	content:"";
+	display:table;
+	clear:both
+}
+input {
+	-webkit-appearance:none;
+	border-radius:0
+}
+a {
+	color:#2094c4;
 	text-decoration:none;
+	outline:none
 }
-ul, ol { list-style-type: none; }
-select, input, img { vertical-align: middle; outline: none; }
-a { text-decoration: none;color:#000; }
-a { blr:expression(this.onFocus=this.blur())
+a:hover {
+	color:#3498db
 }
-a { outline: none; }
-html { /*overflow-x: hidden;*/ }
-.clearfix:after { content: ""; display: block; clear: both; }
-.clearfix { zoom: 1; }
-.fl { float: left; }
-.fr { float: right; }
+p {
+	padding:0 0 20px
+}
+strong {
+	font-weight:bold
+}
+body {
+	color:#000;
+	font:normal 14px/1.4 "helvetica neue",tahoma,"hiragino sans gb",stheiti,"wenquanyi micro hei",\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;
+	width:100%;
+	overflow:hidden
+}
+.left {
+	float:left
+}
+.right {
+	float:right
+}

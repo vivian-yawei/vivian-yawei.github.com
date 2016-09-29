@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>静态页面展示</title>
+<style>
+	*{ padding:0; margin:0;}
+	body{background:#27ae60;}
+	input{width:80px;height:30px;border:2px solid #fff;border-radius:5px;text-align:center;line-height:30px;background:#fff;color:#27ae60;font:bold 16px "黑体";margin-right:40px;}
+	h1{font:42px "微软雅黑";color:#fff;text-align:center;}
+	.list{ width:400px; height:300px;  margin:30px auto; position:relative; list-style:none; }
+	.list li{ width:100%; height:100%; background:#CCC; font-size:100px; color:#FFF; text-align:center; line-height:400px; position:absolute; transition:1s all ease;overflow:hidden;border-radius:20px;box-shadow:0 0 10px #fff;-webkit-box-reflect:below 0 -webkit-linear-gradient(rgba(0, 0, 0, 0) 60%,rgba(0, 0, 0, .5));}
+	.list li a{display:block;width:100%;height:100%;background:rgba(255,255,255,0);}
+	.list .l1{ z-index:1;transform:perspective(800px) translateX(-300px) rotateY(30deg); margin-right:-20px;}
+	.list .l2{ transform:perspective(800px) translateX(-600px); opacity:.8;opacity:0;}
+	.list .r1{ z-index:1;transform:perspective(800px) translateX(300px) rotateY(-30deg);}
+	.list .r2{ transform:perspective(800px) translateX(600px) rotateY(-30deg);opacity:0;}
+	.list .now{ z-index:2;}
+	 p{ text-align:center; margin:100px auto 0;}
+</style>
+<script>
+	window.onload=function(){
+		var aLi=document.querySelectorAll('li');
+		var aBtn=document.querySelectorAll('input');
+		var bHs=true;
+		var aImg=['mi','aiqiyi','meilishuo','game','youku'];
+		var aHref=['html/mi/index.html','html/aiqiyi/index.html','html/meilishuo/index.html','html/game/index.html','html/youku/index.html'];
+		//保存class数组
+		var arrList=[];
+		for(var i=0; i<aLi.length;i++){
+			arrList[i]=aLi[i].className;
+			aLi[i].style.backgroundImage='url(images/web-bg/'+aImg[i]+'.png)';
+			aLi[i].style.backgroundSize='100%';
+			aLi[i].innerHTML='<a href="'+aHref[i]+'" target="_blank"></a>';
+		}
+		
+		aBtn[1].onclick=function(){
+			if(!bHs)return;
+			bHs=false;
+			arrList.push(arrList.shift());
+			
+			for(var i=0; i<aLi.length;i++){
+				aLi[i].className=arrList[i];
+			}
+		};	
+		
+		aBtn[0].onclick=function(){
+			if(!bHs)return;
+			bHs=false;
+			arrList.unshift(arrList.pop());
+			
+			for(var i=0; i<aLi.length;i++){
+				aLi[i].className=arrList[i];
+			}
+		};
+		aLi[0].addEventListener('transitionend',function(){
+			bHs=true;
+		},false);
+	};
+</script>
+</head>
+
+<body>
+	<h1>HTML+CSS静态页展示</h1>
+	<p>
+    	<input type="button" value="←向左" />
+   		<input type="button" value="向右→" />
+    </p>
+	<ul class="list">
+    	<li class="l2"><a href="javascript:;"></a></li>
+        <li class="l1"><a href="javascript:;"></a></li>
+        <li class="now"><a href="javascript:;"></a></li>
+        <li class="r1"><a href="javascript:;"></a></li>
+        <li class="r2"><a href="javascript:;"></a></li>
+    </ul>
+</body>
+</html>

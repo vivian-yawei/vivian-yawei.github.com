@@ -1,517 +1,184 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<title>欢迎进入我的个人网站</title>
-	<!--fonts-->
-		<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-	<!--//fonts-->
-		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-        <link rel="stylesheet" href="css/animate.css"/>
-        <link rel="stylesheet" href="css/common.css"/>
-	<!-- for-mobile-apps -->
-    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="keywords" content="个人网站，我的网站，欢迎进入" />
-		<script type="text/javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-	<!-- //for-mobile-apps -->
-	<!-- js -->
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-	<!-- js -->
-	<!-- start-smooth-scrolling -->
-		<script type="text/javascript" src="js/move-top.js"></script>
-		<script type="text/javascript" src="js/easing.js"></script>
-		<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-				});
-			});
-		</script>
-	<!-- start-smooth-scrolling -->
-
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />	
+	<title>关于我</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/common.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/global.js"></script>
 </head>
-<body>
-<!-- banner -->
-<div class="banner" id="home">
-	<div class="container"> 
-		<div class="top-header row clearfix">
-			<script src="js/classie.js"></script>
-			<!--top-nav---->
-			<div class="logo animated fadeInLeft fl">
-				<a href="index.html"><img src="images/logo.png" alt=""/></a>
-			</div>
-			<div class="top-nav fr">
-				<div class="nav-icon">
-					    <a href="#" class="right_bt" id="activator"><span> </span> </a>
-				</div>
-				<div class="box" id="box">
-					<div class="box_content">        					                         
-						<div class="box_content_center">
-							<div class="form_content">
-								<div class="menu_box_list">
-									<ul>
-										<li><a class="scroll" href="#home"><span>首页</span></a></li>
-										<li><a class="scroll" href="#about"><span>关于我</span></a></li>
-										<li><a class="scroll" href="#portfolio"><span>作品集</span></a></li>
-										<li><a class="scroll" href="#contact"><span>联系我</span></a></li>
-										<div class="clearfix"> </div>
-									</ul>
-								</div>
-								<a class="boxclose" id="boxclose"> <span> </span></a>
-							</div>                                  
-						</div> 	
-					</div> 
-				</div>       	  
-			</div>
-			<!---start-click-drop-down-menu----->
-			        <!----start-dropdown--->
-			         <script type="text/javascript">
-						var $ = jQuery.noConflict();
-							$(function() {
-								$('#activator').click(function(){
-									$('#box').animate({'top':'0px'},900);
-								});
-								$('#boxclose').click(function(){
-								$('#box').animate({'top':'-1000px'},900);
-								});
-							});
-							$(document).ready(function(){
-							//Hide (Collapse) the toggle containers on load
-							$(".toggle_container").hide(); 
-							//Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
-							$(".trigger").click(function(){
-								$(this).toggleClass("active").next().slideToggle("slow");
-									return false; //Prevent the browser jump to the link anchor
-							});
-												
-						});
-					</script>
-			<!---//End-click-drop-down-menu----->
+<body class="loading-process">
+<div class="loading">
+	<div class="loading-circle"></div>
+	<div class="loading-avatar"><img src="images/avatar@2x.jpg" alt="" width="100" height="100"></div>
+	<div class="loading-info">正在努力加载中...</div>
+</div>
+<div class="section-header">
+	<div class="section">
+		<nav class="nav" role="navigation">
+			<ul>
+				<li class="nav-about fade fade1"><a href="#about">关于</a></li>
+				<li class="nav-works fade fade4"><a href="#works">作品</a></li>
+				<li class="fade back-home"><a href="#top">首页</a></li>
+				<li class="nav-skill fade fade2"><a href="#skill">能力</a></li>
+				<li class="nav-contact fade fade3"><a href="#contact">联系</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="nav-bg"></div>
+</div>
+<div class="home-bg">
+	<img src="images/home-bg.jpg" alt="" width="1000" height="667">
+</div>
+<div class="section-wrap section-fristpage" data-slide="1"  >
+	<div class="section">
+		<div class="section-content">
+			<p class="fade fade1">Hi，我是 Vivian</p>
+			<p class="fade fade2">欢迎光临我的社区！</p>
+			<p class="fade fade3">想了解更多，往下滚动哦 ^_^</p>
 		</div>
-		<div class="banner-info clearfix">
-			<div class="banner-left fl">
-				<img src="images/1.png" alt=""/>
-			</div>
-			<div class="banner-right animated fadeInRight fr">
-				<h1><img src="images/name.png" alt="名字"/></h1>
-				<div class="border"></div>
-				<h2><img src="images/web.png" alt="职业"/></h2>
-				<a href="#" download="myself.mht"><img src="images/xiazai.png" alt="下载"/></a>
-			</div>
-		</div>
+		<a class="button2 scroll-tip fade fade4" data-slide="3" title="">向下滚动</a>
 	</div>
 </div>
-<!--/header-banner-->
-<!--about-->
-<div class="about text-center" id="about">
-	<div class="container">
-		<h3>关于我</h3>
-		<div class="strip text-center"><img src="images/about.png" alt=" "/></div>
-        <p>理想是人生的太阳——德莱赛</p>
-	</div>
-</div>
-<!--//about-->
-<div class="about-back"></div>
-<!--my skill-->
-<div class="my-skills text-center">
-	<div class="container">
-		<h3>我的技能</h3>
-		<div class="strip text-center"><img src="images/skill.png" alt=" "/></div>
-		<div class="skill-grids">
-					<div class="col-md-2 skills-grid text-center">
-						<div class="circle" id="circles-1"></div>
-						<p>Photoshop</p>
-					</div>
-					<div class="col-md-2 skills-grid text-center">
-						<div class="circle" id="circles-2"></div>
-						<p>Div+CSS</p>
-					</div>
-					<div class="col-md-2 skills-grid text-center">
-						<div class="circle" id="circles-3"></div>
-						<p>Javascript</p>
-					</div>
-					<div class="col-md-2 skills-grid text-center">
-						<div class="circle" id="circles-4"></div>
-						<p>Html 5 / CSS 3</p>
-					</div>
-					<div class="col-md-2 skills-grid text-center">
-						<div class="circle" id="circles-5"></div>
-						<p>Jquery</p>
-					</div>
-					<div class="col-md-2 skills-grid text-center">
-						<div class="circle" id="circles-6"></div>
-						<p>SQL</p>
-					</div>
-					<div class="clearfix"> </div>
-				 <script type="text/javascript" src="js/circles.js"></script>
-					         <script>
-								var colors = [
-										['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff']
-									];
-								for (var i = 1; i <= 7; i++) {
-									var child = document.getElementById('circles-' + i),
-										percentage = 30 + (i * 10);
-										
-									Circles.create({
-										id:         child.id,
-										percentage: percentage,
-										radius:     80,
-										width:      10,
-										number:   	percentage / 1,
-										text:       '%',
-										colors:     colors[i - 1]
-									});
-								}
-						
-				</script>
-		</div>
-	</div>	
-</div>
-<!--//my skill-->
-<div class="my-skill-back"></div>
-<!--education-->
-<div class="education text-center">
-	<div class="container">
-		<div class="edu-info">
-			<h3>毕业信息</h3>
-		</div>
-		<div class="strip text-center"><img src="images/edu.png" alt=" "/></div>
-		<div class="edu-grids">
-			<div class="col-md-12 edu-grid">
-				<p>2010-2014</p><span>毕业于</span>
-				<img src="images/arrow.png" alt=""/>
-				<div class="edu-border">
-					<div class="edu-grid-master">
-						<h3>计算机科学与技术专业</h3>
-						<h4>江西理工大学四年制本科</h4>
-					</div>
-					<div class="edu-grid-info">
-						<h5>在校间期成绩优秀，间获得三次校级三等奖学金，通过英语四级。
-                        所学专业包括课程有：C/C++程序设计、计算机导论、汇编语言、JAVA语言程序设计、Linux 系统编程、电路、电路实验、程序语言综合课程设计、模拟电子技术、数据结构、数据结构课程设计、数字电路与逻辑设计、WEB技术及应用、操作系统、操作系统课程设计、算法分析与设计、信息安全、单片机原理及应用、软件工程、软件系统课程设计、数据库系统、数字图像处理、微机原理与接口技术、硬件系统课程设计、专业课程设计、编译原理。</h5>
-					</div>
-				</div>
+<div id="about" data-slide="2" data-stellar-background-ratio="0.3" class="section-wrap section-about">
+	<div class="section">
+		<div class="about-content clearfix section-content">
+			<div class="introli">
+			  <span class="left_icon"><img class="bio-text bio-icon-1" src="images/bio-icon-1.png"></span>
+			  <span class="right_content "><img class="bio-text bio-text-1" src="images/bio-text-1.png"></span>
+			</div>
+			<div class="introli">
+			  <span class="left_icon"><img class="bio-text bio-icon-2" src="images/bio-icon-2.png"></span>
+			  <span class="right_content"><img class="bio-text bio-text-2" src="images/bio-text-2.png"></span>
+			</div>
+			<div class="introli">
+			  <span class="left_icon"><img class="bio-text bio-icon-3" src="images/bio-icon-3.png"></span>
+			  <span class="right_content"><img class="bio-text bio-text-3" src="images/bio-text-3.png"></span>
 			</div>
 		</div>
-	</div>
-	
-</div>
-<!--//education-->
-<div class="strip-border"><p></p></div>
-<!--work-->
-<div class="work-experience text-center">
-	
-	<div class="container">
-		<div class="work-info">
-			<h3>工作经历</h3>
-		</div>
-		<div class="strip text-center"><img src="images/work.png" alt=" "/></div>
-		<div class="work-grids">
-        	<div class="col-md-4 w-grid">
-				<div class="work-grid">
-					<h3>2013 /3--2013 /7</h3>
-					<div class="work-grid-info">
-						<h4>企桥工作室</h4>
-						<h5>网站前端</h5>
-						<p>自学html，div+css,
-                        javascript,
-                        dreamweaver,
-                        photoshop等，做了一些网页。</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 w-grid">
-				<div class="work-grid">
-					<h3>2013 /7--2013 /9</h3>
-					<div class="work-grid-info">
-						<h4>赣州福雷斯文化传播有限公司 </h4>
-						<h5>c#开发</h5>
-						<p>工作期间涉及到一些简单的软件测试（黑盒测试）和关于一个CRM管理系统的软件需求规格说明书的编写，小项目股票模拟系统，局域网聊天室等的开发。</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 w-grid">
-				<div class="work-grid">
-					<h3>2014/8 - 2016/5</h3>
-					<div class="work-grid-info">
-						<h4>上海泰克赛尔软件有限公司</h4>
-						<h5>技术支持工程师</h5>
-						<p>主要学习本公司的管理工具，包括项目管理，运维管理，客户关系管理，了解客户需求，看是否满足客户的需求，做产品演示</p>
-					</div>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-</div>
-<!--//work-->
-<div class="services-back"></div>
-<!--portfolio-->
-<div class="gallery-section text-center" id="portfolio">
-	<div class="container">
-		<h3>作品集1</h3>
-		<div class="strip text-center"><img src="images/port.png" alt=" "/></div>
-		<p>这些作品包括一些网页作品，js作品，手机端及HTML5游戏等</p>
-		<div class="gallery-grids">
-			<div class="top-gallery">
-				<div class="col-md-4 gallery-grid gallery1">
-					<a href="images/p1.jpg" class="swipebox"><img src="images/p1.jpg" class="img-responsive" alt="/">
-						<div class="textbox">
-							<h4>网页布局</h4>
-							<p>web前端开发</p>
-							<div class="button"><a href="div.html">VIEW</a></div>
-						</div>
-				</div></a>
-				<div class="col-md-4 gallery-grid gallery1">
-					<a href="images/p2.jpg" class="swipebox"><img src="images/p2.jpg" class="img-responsive" alt="/">
-						<div class="textbox">
-							<h4>Project Name</h4>
-							<p>WEB DESIGN</p>
-							<div class="button"><a href="images/p2.jpg" class="swipebox">VIEW</a></div>
-						</div>
-				</div></a>
-				<div class="col-md-4 gallery-grid gallery1">
-					<a href="images/p3.jpg" class="swipebox"><img src="images/p3.jpg" class="img-responsive" alt="/">
-						<div class="textbox">
-							<h4>Project Name</h4>
-							<p>WEB DESIGN</p>
-							<div class="button"><a href="images/p3.jpg" class="swipebox">VIEW</a></div>
-						</div>
-				</div></a>
-				<div class="col-md-4 gallery-grid gallery1">
-					<a href="images/p4.jpg" class="swipebox"><img src="images/p4.jpg" class="img-responsive" alt="/">
-						<div class="textbox">
-							<h4>Project Name</h4>
-							<p>WEB DESIGN</p>
-							<div class="button"><a href="images/p4.jpg" class="swipebox">VIEW</a></div>
-						</div>
-				</div></a>
-				<div class="col-md-4 gallery-grid gallery1">
-					<a href="images/p5.jpg" class="swipebox"><img src="images/p5.jpg" class="img-responsive" alt="/">
-						<div class="textbox">
-							<h4>Project Name</h4>
-							<p>WEB DESIGN</p>
-							<div class="button"><a href="images/p5.jpg" class="swipebox">VIEW</a></div>
-						</div>
-				</div></a>
-				<div class="col-md-4 gallery-grid gallery1">
-					<a href="images/p6.jpg" class="swipebox"><img src="images/p6.jpg" class="img-responsive" alt="/">
-						<div class="textbox">
-							<h4>Project Name</h4>
-							<p>WEB DESIGN</p>
-							<div class="button"><a href="images/p6.jpg" class="swipebox">VIEW</a></div>
-						</div>
-				</div></a>
-				<div class="clearfix"> </div>
-			</div>
-				<link rel="stylesheet" href="css/swipebox.css">
-				<script src="js/jquery.swipebox.min.js"></script> 
-					<script type="text/javascript">
-						jQuery(function($) {
-							$(".swipebox").swipebox();
-						});
-					</script>
-		</div>
-	</div>
-</div>
-<!--//portfolio-->
-<!--blog-->
-<div class="blog" id="blog">
-	<div class="container">
-		<div class="blog-info text-center">
-			<h3>作品集2</h3>
-			<div class="strip text-center"><img src="images/blog.png" alt=" "/></div>
-		</div>
-		<div class="blog-grids">
-			<div class="col-md-4 blog-text-info">
-				<div class="blog-grid">
-					<a href="single.html"><img src="images/a.jpg" alt=""/></a>
-					<div class="blog-text">
-						<a href="single.html">Nature is lethal but it doesn't hold a candle to man.</a>
-						<div class="stripa"></div>
-						<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria 
-						and viruses differently than mine. You don't get sick, I do.</p>
-					</div>
-				
-					<div class="blog-para">
-							<ul>
-								<li><a href="#">3 Comments</a></li>
-								<li><a href="#">8 Share</a></li>
-							</ul>
-					</div>	
-					<div class="blog-pos">
-						<p>5<span>May</span></p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 blog-text-info">
-				<div class="blog-grid">
-					<a href="single.html"><img src="images/b.jpg" alt=""/></a>
-					<div class="blog-text">
-						<a href="single.html">Nature is lethal but it doesn't hold a candle to man.</a>
-						<div class="stripa"></div>
-						<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria 
-						and viruses differently than mine. You don't get sick, I do.</p>
-					</div>
-				
-					<div class="blog-para">
-							<ul>
-								<li><a href="#">3 Comments</a></li>
-								<li><a href="#">8 Share</a></li>
-							</ul>
-					</div>
-					<div class="blog-pos">
-						<p>5<span>May</span></p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 blog-text-info">
-				<div class="blog-grid">
-					<a href="single.html"><img src="images/c.jpg" alt=""/></a>
-					<div class="blog-text">
-						<a href="single.html">Nature is lethal but it doesn't hold a candle to man.</a>
-						<div class="stripa"></div>
-						<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria 
-						and viruses differently than mine. You don't get sick, I do.</p>
-					</div>
-				
-					<div class="blog-para">
-							<ul>
-								<li><a href="#">3 Comments</a></li>
-								<li><a href="#">8 Share</a></li>
-							</ul>
-					</div>
-					<div class="blog-pos">
-						<p>5<span>May</span></p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 blog-text-info">
-				<div class="blog-grid">
-					<a href="single.html"><img src="images/a.jpg" alt=""/></a>
-					<div class="blog-text">
-						<a href="single.html">Nature is lethal but it doesn't hold a candle to man.</a>
-						<div class="stripa"></div>
-						<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria 
-						and viruses differently than mine. You don't get sick, I do.</p>
-					</div>
-				
-					<div class="blog-para">
-							<ul>
-								<li><a href="#">3 Comments</a></li>
-								<li><a href="#">8 Share</a></li>
-							</ul>
-					</div>
-					<div class="blog-pos">
-						<p>5<span>May</span></p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 blog-text-info">
-				<div class="blog-grid">
-					<a href="single.html"><img src="images/b.jpg" alt=""/></a>
-					<div class="blog-text">
-						<a href="single.html">Nature is lethal but it doesn't hold a candle to man.</a>
-						<div class="stripa"></div>
-						<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria 
-						and viruses differently than mine. You don't get sick, I do.</p>
-					</div>
-				
-					<div class="blog-para">
-							<ul>
-								<li><a href="#">3 Comments</a></li>
-								<li><a href="#">8 Share</a></li>
-							</ul>
-					</div>
-					<div class="blog-pos">
-						<p>5<span>May</span></p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 blog-text-info">
-				<div class="blog-grid">
-					<a href="single.html"><img src="images/c.jpg" alt=""/></a>
-					<div class="blog-text">
-						<a href="single.html">Nature is lethal but it doesn't hold a candle to man.</a>
-						<div class="stripa"></div>
-						<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria 
-						and viruses differently than mine. You don't get sick, I do.</p>
-					</div>
-				
-					<div class="blog-para">
-							<ul>
-								<li><a href="#">3 Comments</a></li>
-								<li><a href="#">8 Share</a></li>
-							</ul>
-					</div>
-					<div class="blog-pos">
-						<p>5<span>May</span></p>
-					</div>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-</div>
-<!--//blog-->
-<div class="contact-back"></div>
-<!--contact-->
-<div class="contact" id="contact">
-	<div class="container">
-		<div class="contact-info text-center">
-			<h3>联系我</h3>
-			<div class="strip text-center"><img src="images/con1.png" alt=" "/></div>
-				<ul>
-					<li>中文名: 沈亚伟</li>
-					<li>英文名: Vivian Shen</li>
-					<li>手机: 15800957204</li>
-					<li>邮箱: 15800957204@163.com</li>
-				</ul>
-		</div>
-	</div>
-</div>
-<!--//contact-->
-<div class="footer-top"></div>
-<!--resume-->
-<div class="resume text-center">
-	<div class="container">
-		<div class="strip text-center"><a href="#"><img src="images/down.png" alt=" "/></a></div>
-		<div class="down"><a href="#">下载我的简历</a></div>
-	</div>
-</div>
-<!--//resume-->
 
-<!--footer-->
-<div class="footer">
-	<div class="container">
-		<p>Copyright &copy; 2016 Write by Vivian Shen</p>
+	</div>
+	<a class="button2 dark-button2 scroll-tip" style="background-position:0 -60px;" data-slide="3" title=""></a>
+</div>
+<div id="works" class="section-wrap section-works" data-slide="3" >
+	<div class="section">
+		<div class="works-content section-content">
+			<h1>前端作品</h1>
+			<div class="works-list clearfix">
+				<div class="works-item first fade fade1">
+					<a href="staticweb.html" target="_blank">
+						<img src="images/works/yizaojia.jpg" alt="" width="300" height="180">
+						<div class="work-info">
+							<h2>Div+css静态页面开发案例</h2>
+							<p><strong>开发时间</strong>：2016年3月<br>
+							<strong>工作详情</strong>：框架设计及前端制作。</p>
+						</div>
+					</a>
+				</div>
+				<div class="works-item fade fade2">
+					<a href="#/" target="_blank">
+						<img src="images/works/91zaojia.jpg" alt="" width="300" height="180">
+						<div class="work-info">
+							<h2>喜欢我做的东西就关注我把！</h2>
+							<p><strong>开发时间</strong>：2013年10月<br>
+							<strong>工作详情</strong>：页面设计及前端制作。</p>
+						</div>
+					</a>
+				</div>
+				<div class="works-item fade fade3">
+					<a href="#/" target="_blank">
+						<img src="images/works/wenku.jpg" alt="" width="300" height="180">
+						<div class="work-info">
+							<h2>喜欢我做的东西就关注我把！</h2>
+							<p><strong>开发时间</strong>：2013年12月<br>
+							<strong>工作详情</strong>：页面设计及前端绑定和制作。</p>
+						</div>
+					</a>
+				</div>
+				<div class="works-item first fade fade4">
+					<a href="#" target="_blank">
+						<img src="images/works/shinedeliver.jpg" alt="" width="300" height="180">
+						<div class="work-info">
+							<h2>喜欢我做的东西就关注我把！</h2>
+							<p><strong>开发时间</strong>：2012年11月<br>
+							<strong>工作详情</strong>：独立开发和制作。</p>
+						</div>
+					</a>
+				</div>
+				<div class="works-item fade fade2">
+					<a>
+						<img src="images/works/wxshop.jpg" alt="" width="300" height="180">
+						<div class="work-info">
+							<h2>喜欢我做的东西就关注我把！</h2>
+							<p><strong>开发时间</strong>：2014年05月<br>
+							<strong>工作详情</strong>：前端页面开发及绑定。</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<a class="button2 scroll-tip fade fade4" data-slide="4" title="">向下滚动</a>
 	</div>
 </div>
-<!--//footer-->
-<!-- here stars scrolling icon -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-			/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-				};
-			*/
-								
-			$().UItoTop({ easingType: 'easeOutQuart' });
-								
-			});
-	</script>
-<!-- //here ends scrolling icon -->
+<div id="skill" class="section-wrap section-skill" data-slide="4">
+	<div class="section">
+		<div class="skill-content section-content">
+<!--			<h1>相关技能</h1>-->
+			<ul>
+            	<li class="fade fade1">熟练使用Photoshop对设计图进行切割和导出。</li>
+				<li class="fade fade1">熟练掌握语义化的 HTML 和具有兼容性的 CSS 模式，熟练手写符合 W3C 标准的结构和代码,对 可用性、可访问性、前端性能优化、最优实践 等有一定的了解和实践。</li>
+				<li class="fade fade3">熟练掌握 Less 等前端开发和团队协作工具。</li>
+                <li class="fade fade2">熟练掌握JavaScript开发语言，注重JavaScript性能优化、了解面向对象机制、设计模式，能运用seajs模块化MVC、面向对象的方式编程。</li>
+				<li class="fade fade4">熟练掌握 jQuery/bootstrap，实现日常需要的交互效果。</li>
+				<li class="fade fade3">熟悉Nodejs，MySQl，有一定 PHP 后端相关知识。</li>
+				<li class="fade fade2">熟练掌握 Ajax,jsonp 工作原理和实现方法。</li>
+				<li class="fade fade2">对前端HTML5 和 CSS3 ,对 Linux canvas，svg有一定了解。</li>
+                <li class="fade fade2">熟悉zepto、iScroll、swiper、harmer、JqueryMobile等常用移动端框架。</li>
+				<li class="fade fade1">了解手机前端开发reactjs,vue及angularjs等。</li>
+				<li class="fade fade4">了解es6新语法。</li>
+				<li class="fade fade2">喜欢接触新事物，有一定的自学能力。</li>
+			</ul>
+		</div>
+	</div>
+	<a class="button2 scroll-tip fade fade4"  data-slide="5" title="">向下滚动</a>
+</div>
+<div id="contact" class="section-wrap section-contact" data-slide="5">
+	<div class="section">
+		<div class="contact-content clearfix section-content">
+			<h1>联系本人</h1>
+			<div class="left">
+				<div class="contact-ways fade fade1">
+					<h2>社交网络</h2>
+					<ul>
+						<li>邮箱：yawei_shen@sina.com</li>
+						<li>Q Q ：502621735</li>
+						<li>手机：15800957204</li>
+						<li>微博：西琉玥V5</li>
+						<li>Github：</li>
+					</ul>
+				</div>
+				<div class="contact-info fade fade2">
+					<p>虽然有社交网络，但是平时上的比较少，很多时候是只看不发！不过你可以关注我哦！</p>
+				</div>
+			</div>
+			<div class="right fade fade3">
+				<h2>项目外包</h2>
+				<p>如果你有前端相关的需求，可以联系我做外包，目前我主要做：</p>
+				<ul>
+					<li>网站布局设计及制作，网站页面制作。</li>
+					<li>根据需求，对网站前端进行修改和优化，或者转响应式处理。</li>
+					<li>企业网站建设及相关功能开发。</li>
+					<li>对于网站建设项目，我也有一些同行朋友可以推荐，也欢迎咨询！</li>
+				</ul>
+				<p><strong>适用浏览器</strong>：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>
+				
+			</div>
+		</div>
+	</div>
+	<a class="button2 button2-2-top scroll-tip" id="gototops" data-slide="1" href="#top" style="background-position: -60px 0;width:80px;height:80px;" title=""></a>
+</div>
 </body>
 </html>
+

@@ -1,0 +1,1034 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/common.css"/>
+<link rel="stylesheet" href="css/style.css"/>
+<script>
+function close_bannner(){
+	var oClose=document.getElementById('close');
+	var oCommemoration=document.getElementById('commemoration');
+	var oBg_div=document.getElementById('bg_div');
+	var oMain_content=document.getElementById('main_content');
+	oClose.onclick=function(){
+		oCommemoration.style.display='none';
+		oBg_div.style.display='block';
+		oMain_content.style.background='#ecedee';
+	}
+};
+function top_nav_more(){
+	var oMore=document.getElementById('top_nav_more');
+	var oUl=oMore.getElementsByTagName('ul')[0];
+	oMore.onmouseover=function(){
+		oUl.style.display='block';
+	};
+	oUl.onmouseover=function(){
+		oUl.style.display='block';
+	};
+	oMore.onmouseout=function(){
+		oUl.style.display='none';
+	};
+	oUl.onmouseout=function(){
+		oUl.style.display='none';
+	};
+};
+function am_bg(){
+    
+	var oDiv=document.getElementById('am_bg');
+	var aA=oDiv.getElementsByTagName('a');
+	var aB=oDiv.getElementsByTagName('b');
+	for(var i=0;i<aA.length;i++){
+		aA[i].index=i;
+		aA[i].onmouseover=function(){
+			aB[this.index].style.display='block';
+		};
+		aA[i].onmouseout=function(){
+			aB[this.index].style.display='none';
+		};
+	}		
+}
+function yuanchuangbanner(id1,id2){
+	var oB=document.getElementById(id1);
+	var oDiv=document.getElementById(id2);
+	var aUl=oDiv.children;
+	var aA=oB.getElementsByTagName('a');
+	for(var i=0;i<aA.length;i++){
+		aA[i].index=i;
+		aA[i].onmouseover=function(){
+			for(var j=0;j<aA.length;j++){
+				aA[j].className='yc';
+				aUl[j].style.display='none';
+			}
+			aA[this.index].className='yc active';
+			aUl[this.index].style.display='block';
+		};		
+	}
+}
+function month_hot_list(id){
+	var oUl=document.getElementById(id);
+	var aA=oUl.getElementsByTagName('a');
+	var aB=oUl.getElementsByTagName('b');
+	for(var i=0;i<aA.length;i++){
+		aA[i].index=i;
+		aA[i].onmouseover=function(){
+			aB[this.index].style.display='block';
+		};
+		aA[i].onmouseout=function(){
+			aB[this.index].style.display="none";
+		};
+	}
+}                   
+window.onload=function(){
+	close_bannner();
+	top_nav_more();
+	am_bg();
+	yuanchuangbanner('yuanchuang_b','yuanchuang_c');
+	yuanchuangbanner('tv_b','tv_c');
+	yuanchuangbanner('variety_b','variety_c');
+	yuanchuangbanner('video_b','video_c');
+	month_hot_list('month_hot_list');
+	month_hot_list('ykknowyou');
+	month_hot_list('yuanchuang1');
+	month_hot_list('yuanchuang2');
+	month_hot_list('fang');
+	month_hot_list('tv1');
+	month_hot_list('tv2');
+	month_hot_list('tv3');
+	month_hot_list('tv4');
+	month_hot_list('tv5');
+	month_hot_list('variety1');
+	month_hot_list('variety2');
+	month_hot_list('variety3');
+	month_hot_list('variety4');
+	month_hot_list('video1');
+	month_hot_list('video2');
+	month_hot_list('video3');
+	month_hot_list('video4');
+	month_hot_list('video5');
+	month_hot_list('kartoon');
+};
+
+</script>
+</head>
+
+<body>
+    <!--begin container-->
+    <div class="container">
+        <!-- begin header-->
+        <div style="height:82px;">
+        <div class="header clearfix">
+        	<h1 class="fl"><a href="javascript:;" title="youku 优酷">优酷</a></h1>
+            <ul class="header_nav fl">
+            	<li class="active"><a href="javascript:;">首页</a></li>
+                <li><a href="javascript:;">发现</a></li>
+                <li><a href="javascript:;">订阅</a></li>
+                <li><a href="javascript:;">会员</a></li>
+                <li><a href="javascript:;">我的</a></li>
+            </ul>
+            <div class="header_info fl clearfix">
+            	<a class="info1" href="javascript:;">登录</a>
+                <a class="info2" href="javascript:;"><i class="icon1"></i></a>
+                <a class="info3" href="javascript:;"><i class="icon2"></i></a>
+                <a class="info4" href="javascript:;"><i class="icon3"></i></a>
+            </div>
+            <div class="soo fl clearfix">
+            	<input type="text"/>
+                <a href="javascript:;">搜库</a>
+                <i class="icon1"></i>
+                <a class="icon2" href="javascript:;" title="优酷排行榜"></a>
+            </div>
+        </div>
+        </div>
+        <!-- end header-->
+        <!--begin content -->
+        <div class="content">
+        <!--begin top-nav -->
+        	<div class="top-nav clearfix">	
+                <ul class="top-nav-main fl clearfix">
+                                 
+                     <li class="current"><a href="javascript:;">首页</a></li>
+                     
+                     <li><a href="javascript:;">电视剧</a></li>
+                     
+                     <li><a href="javascript:;">电影</a></li>
+                     
+                     <li><a href="javascript:;">综艺</a></li>
+                     
+                     <li><a href="javascript:;">音乐</a></li>
+                     
+                     <li><a href="javascript:;">少儿</a></li>
+                     
+                     <li><a href="javascript:;">来疯</a></li>
+                     
+                     <li><a href="javascript:;">直播</a></li>
+                     
+                     <li><a href="javascript:;">片库</a></li>
+                     
+                     <li><a href="javascript:;">资讯</a></li>
+                     
+                     <li><a href="javascript:;">纪实</a></li>
+                     
+                     <li><a href="javascript:;">公益</a></li>
+                     
+                     <li><a href="javascript:;">欧洲杯</a></li>
+                     
+                     <li><a href="javascript:;">汽车</a></li>
+                     
+                     <li><a href="javascript:;">科技</a></li>
+                     
+                     <li><a href="javascript:;">财经</a></li>
+                     
+                     <li><a href="javascript:;">娱乐</a></li>
+                     
+                     <li><a href="javascript:;">原创</a></li>
+                     
+                     <li><a href="javascript:;">动漫</a></li>
+                     
+                     <li><a href="javascript:;">搞笑</a></li>
+                     
+                     <li><a href="javascript:;">旅游</a></li>
+                    <li><a href="javascript:;">时尚</a></li>
+                    <li><a href="javascript:;">亲子</a></li>
+                    <li><a href="javascript:;">教育</a></li>
+                    <li><a href="javascript:;">游戏</a></li>
+                    <li><a href="javascript:;">拍客</a></li>
+        </ul>
+                <div class="top-nav-more fl" id="top_nav_more">
+                    <span>更多 <b class="caret"></b></span>
+                          <ul>
+                              <li class="arrow"></li>
+                                                     
+                              <li>
+                                  <a title="优酷VR" href="http://vr.youku.com/">优酷VR</a>
+                              </li>
+                               
+                              <li>
+                                  <a title="生活" href="http://life.youku.com/">生活</a>
+                              </li>
+                               
+                              <li>
+                                  <a title="话题" href="http://gh.youku.com/topic_page/topic_list">话题</a>
+                              </li>
+                               
+                              <li>
+                                  <a title="排行" href="http://top.youku.com/rank/">排行</a>
+                              </li>
+                              <i class="icon"></i>
+                                                                      </ul>
+                 </div>
+                 <div class="top-nav-right fl">
+                    <div class="g-nav-appdown">
+                        <a target="_blank" title="下载" href="http://pd.youku.com/">下载</a>
+                    </div>
+                </div>
+            </div>
+	    <!--end top-nav -->	
+        <!--begin main-content -->
+        <div class="main-content" id="main_content">
+        	<div id="commemoration">
+            	<a href="javascript:;" id="close">×关闭</a>
+            </div>
+             <!--begin bg-div -->
+                <div class="bg-div" id="bg_div" style="display:none;">
+                </div>
+              <!--end bg-div -->
+            <!--begin b-main-content-->
+            <div class="b-main-content">
+            	<!--begin hot-top -->
+            	<div class="hot-top clearfix" id="am_bg">
+                	<ul class="clearfix fl am">
+                    	<li><a href="javascript:;"><img src="img/topbg1.png" alt=""/><b class="description"><span></span><i class="p1 p3">&lt;终极一班4&gt;雷婷转型香肠妹 大东女友变吃货</i><i class="p2">104万次播放 506次评论</i><i class="b">立刻播放</i></b></a>
+                        </li>
+                        <li><a href="javascript:;"><img src="img/topbg2.png" alt=""/><b class="description"><span></span><i class="p1 p3">大东女友变吃货</i><i class="p2">104万次播放 506次评论</i><i class="b">立刻播放</i></b></a>
+                        </li>
+                        <li><a href="javascript:;"><img src="img/topbg3.png" alt=""/><b class="description"><span></span><i class="p1 p3">大东女友变吃货</i><i class="p2">104万次播放 506次评论</i><i class="b">立刻播放</i></b></a>
+                        </li>
+                    </ul>
+                    <ul class="clearfix fl">
+                    	<li><a href="javascript:;"><img src="img/topbg4.png" alt=""/><b class="description"><span></span><i class="p1 p3">大东女友变吃货</i><i class="p2">104万次播放 506次评论</i><i class="b">立刻播放</i></b></a>
+                        </li>
+                        <li><a href="javascript:;"><img src="img/topbg5.png" alt=""/><b class="description"><span></span><i class="p1 p3">大东女友变吃货</i><i class="p2">104万次播放 506次评论</i><i class="b">立刻播放</i></b></a>
+                        </li>
+                        <li><a href="javascript:;"><img src="img/topbg6.png" alt=""/><b class="description"><span></span><i class="p1 p3">大东女友变吃货</i><i class="p2">104万次播放 506次评论</i><i class="b">立刻播放</i></b></a>
+                        </li>
+                        <li><a href="javascript:;"><img src="img/topbg4.png" alt=""/><b class="description"><span></span><i class="p1 p3">大东女友变吃货</i><i class="p2">104万次播放 506次评论</i><i class="b">立刻播放</i></b></a>
+                        </li>
+                        <li><a href="javascript:;"><img src="img/topbg5.png" alt=""/><b class="description"><span></span><i class="p1 p3">大东女友变吃货</i><i class="p2">104万次播放 506次评论</i><i class="b">立刻播放</i></b></a>
+                        </li>
+                        <li><a href="javascript:;"><img src="img/topbg6.png" alt=""/><b class="description"><span></span><i class="p1 p3">大东女友变吃货</i><i class="p2">104万次播放 506次评论</i><i class="b">立刻播放</i></b></a>
+                        </li>
+                    </ul>
+                    <div class="top-hot-right fl">
+                        <div class="adver"><a href="javascript:;"><img src="img/topbg7.png" alt=""/><b></b></a></div>
+                        <div class="clearfix">
+                            <div class="fl ad">
+                            <a href="javascript:;"><img src="img/topbg8.png" alt=""/><b class="description"><span></span><i class="p1 p3">大东女友变吃货</i><i class="p2">104万次播放 506次评论</i><i class="b">立刻播放</i></b></a>
+                            
+                            <a href="javascript:;"><img src="img/topbg9.png" alt=""/><b class="description"><span></span><i class="p1 p3">大东女友变吃货</i><i class="p2">104万次播放 506次评论</i><i class="b">立刻播放</i></b></a>
+                            </div> 
+                            <div class="am_ad fl"><a href="javascript:;"><img src="img/topbg10.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a></div>    
+                        </div>
+                    </div>
+                </div>
+                <!-- end hot-top-->
+                <!--begin bg-div -->
+                <div class="bg-div">
+                </div>
+                <!--end bg-div -->
+                <!--begin month-hot -->
+                <div class="month-hot">
+                	<div class="month-hot-menu clearfix"><h3><a href="javascript:;">7月热门独播</a></h3><a href="javascript:;" class="icon1"></a></div>
+                    <ul class="month-hot-list clearfix" id="month_hot_list">
+                    	<li>
+                        <a href="javascript:;"><img src="img/topbg11.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                        <p class="smt">叛变甘当“肉盾”</p>  
+                        </li>
+                        <li><a href="javascript:;"><img src="img/topbg12.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                        <p class="smt">叛变甘当“肉盾”</p></li>
+                        <li><a href="javascript:;"><img src="img/monbg1.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                        <p class="smt">叛变甘当“肉盾”</p></li>
+                        <li><a href="javascript:;"><img src="img/monbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                        <p class="smt">叛变甘当“肉盾”</p></li>
+                        <li><a href="javascript:;"><img src="img/monbg3.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                        <p class="smt">叛变甘当“肉盾”</p></li>
+                        <li class="crm"><a href="javascript:;"><img src="img/monbg4.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                        <p class="smt">叛变甘当“肉盾”</p></li>
+                    </ul>
+                </div>
+                <!--end month-hot -->
+                 <!--begin bg-div -->
+                <div class="bg-div">
+                </div>
+                <!--end bg-div -->
+                <!--begin ykknowyou -->
+                <div class="ykknowyou clearfix">
+                    <div class="month-hot month-hot2 fl">
+                        <div class="month-hot-menu month-hot-menu2 clearfix"><h3>优酷懂你</h3><span>猜的不准么？<a href="javascript:;">登录</a> 后再看看吧~~</span><a href="javascript:;" class="quan">换一换</a></div>
+                        <ul class="month-hot-list month-hot-list2 clearfix" id="ykknowyou">
+                            <li>
+                            <a href="javascript:;"><img src="img/dni1.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                            <p class="p1"><a href="javascript:;">郭德纲发飙怒斥节目组 花样男团  20160625<b></b></a></p>
+                            <p class="smt">719.6万次播放&nbsp;&nbsp;&nbsp;2,509次评论</p>
+                            </li>
+                            <li>
+                            <a href="javascript:;"><img src="img/dni1.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                            <p class="p1"><a href="javascript:;">郭德纲发飙怒斥节目组 花样男团  20160625<b></b></a></p>
+                            <p class="smt">719.6万次播放&nbsp;&nbsp;&nbsp;2,509次评论</p>
+                            </li>
+                           <li>
+                            <a href="javascript:;"><img src="img/dni1.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                            <p class="p1"><a href="javascript:;">郭德纲发飙怒斥节目组 花样男团  20160625<b></b></a></p>
+                            <p class="smt">719.6万次播放&nbsp;&nbsp;&nbsp;2,509次评论</p>
+                            </li>
+                            <li>
+                            <a href="javascript:;"><img src="img/dni1.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                            <p class="p1"><a href="javascript:;">郭德纲发飙怒斥节目组 花样男团<b></b></a></p>
+                            <p class="smt">719.6万次播放&nbsp;&nbsp;&nbsp;2,509次评论</p>
+                            </li>
+                            <li class="crm">
+                            <a href="javascript:;"><img src="img/dni1.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                            <p class="p1"><a href="javascript:;">郭德纲发飙怒斥节目组 花样男团  20160625<b></b></a></p>
+                            <p class="smt">719.6万次播放&nbsp;&nbsp;&nbsp;2,509次评论</p>
+                            </li>
+                            <li>
+                            <a href="javascript:;"><img src="img/dni1.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                            <p class="p1"><a href="javascript:;">郭德纲发飙怒斥节目组 花样男团  20160625<b></b></a></p>
+                            <p class="smt">719.6万次播放&nbsp;&nbsp;&nbsp;2,509次评论</p>
+                            </li>
+                             <li>
+                            <a href="javascript:;"><img src="img/dni1.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                            <p class="p1"><a href="javascript:;">郭德纲发飙怒斥节目组 花样男团  20160625<b></b></a></p>
+                            <p class="smt">719.6万次播放&nbsp;&nbsp;&nbsp;2,509次评论</p>
+                            </li>
+                             <li>
+                            <a href="javascript:;"><img src="img/dni1.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                            <p class="p1"><a href="javascript:;">郭德纲发飙怒斥节目组 花样男团  20160625<b></b></a></p>
+                            <p class="smt">719.6万次播放&nbsp;&nbsp;&nbsp;2,509次评论</p>
+                            </li>
+                             <li>
+                            <a href="javascript:;"><img src="img/dni1.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                            <p class="p1"><a href="javascript:;">郭德纲发飙怒斥节目组 花样男团  20160625<b></b></a></p>
+                            <p class="smt">719.6万次播放&nbsp;&nbsp;&nbsp;2,509次评论</p>
+                            </li>
+                             <li class="crm">
+                            <a href="javascript:;"><img src="img/dni1.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                            <p class="p1"><a href="javascript:;">郭德纲发飙怒斥节目组 花样男团  20160625<b></b></a></p>
+                            <p class="smt">719.6万次播放&nbsp;&nbsp;&nbsp;2,509次评论</p>
+                            </li>
+                        </ul>
+                	</div>
+                    <div class="month-hot month-hot3 fl">
+                        <div class="month-hot-menu month-hot-menu3 clearfix"><h3><a href="javascript:;">产品大全</a></h3></div>
+                        <div class="Products">
+                            <div class="Products-list"><i class="icon1"></i><a href="javascript:;" class="sub">来&nbsp;&nbsp;&nbsp;疯</a><a href="javascript:;">热门主播</a><a href="javascript:;">来疯APP</a></div>
+                            <div class="Products-list"><i class="icon2"></i><a href="javascript:;" class="sub">话&nbsp;&nbsp;&nbsp;题</a><a href="javascript:;">热门主播</a><a href="javascript:;">来疯APP</a></div>
+                            <div class="Products-list"><i class="icon3"></i><a href="javascript:;" class="sub">来&nbsp;&nbsp;&nbsp;疯</a><a href="javascript:;">热门主播</a><a href="javascript:;">来疯APP</a></div>
+                            <div class="Products-list"><i class="icon4"></i><a href="javascript:;" class="sub">自频道</a><a href="javascript:;">热门主播</a><a href="javascript:;">来疯APP</a></div>
+                            <div class="Products-list"><i class="icon5"></i><a href="javascript:;" class="sub">来&nbsp;&nbsp;&nbsp;疯</a><a href="javascript:;">热门主播</a><a href="javascript:;">来疯APP</a></div>
+                            <div class="Products-list"><i class="icon6"></i><a href="javascript:;" class="sub">玩游戏</a><a href="javascript:;">热门主播</a><a href="javascript:;">来疯APP</a></div>
+                            <div class="Products-list"><i class="icon7"></i><a href="javascript:;" class="sub">来&nbsp;&nbsp;&nbsp;疯</a><a href="javascript:;">热门主播</a><a href="javascript:;">来疯APP</a></div>
+                            <div class="Products-list"><i class="icon8"></i><a href="javascript:;" class="sub">来&nbsp;&nbsp;&nbsp;疯</a><a href="javascript:;">热门主播</a><a href="javascript:;">来疯APP</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="advertising"><a href="javascript:;"><img src="img/adbg2.png" alt=""/></a></div>
+                    <div class="bg-div">
+                    </div>
+                <!--end ykknowyou -->
+                <!--begin yuanchuang -->
+                <div class="month-hot month-hot4">
+                	<div class="month-hot-menu clearfix"><h3><a href="javascript:;" class="cb">原创</a><b>·</b><a href="javascript:;">出品</a></h3><b id="yuanchuang_b"><a href="javascript:;" class="yc active">最佳原创</a><a href="javascript:;" class="yc">优酷出品</a></b></div>
+                    <div id="yuanchuang_c">
+                        <ul class="month-hot-list clearfix" id="yuanchuang1" style="display:block;">
+                            <li>
+                            <a href="javascript:;"><img src="img/ycbg1.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                            <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                            <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p>
+                            </li>
+                            <li><a href="javascript:;"><img src="img/ycbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                            <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                            <li><a href="javascript:;"><img src="img/ycbg3.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                            <p class="smt">叛变甘当“肉盾”</p></li>
+                            <li><a href="javascript:;"><img src="img/ycbj4.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                            <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                            <li><a href="javascript:;"><img src="img/ycbj5.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                            <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                            <li class="crm"><a href="javascript:;"><img src="img/ycbj6.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                            <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        </ul>
+                        <ul class="month-hot-list clearfix" id="yuanchuang2" style="display:none;">
+                            <li>
+                            <a href="javascript:;"><img src="img/ycbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                            <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                            <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p>
+                            </li>
+                            <li><a href="javascript:;"><img src="img/ycbg1.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                            <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                            <li><a href="javascript:;"><img src="img/ycbg3.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                            <p class="smt">叛变甘当“肉盾”</p></li>
+                            <li><a href="javascript:;"><img src="img/ycbj4.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                            <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                            <li><a href="javascript:;"><img src="img/ycbj5.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                            <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                            <li class="crm"><a href="javascript:;"><img src="img/ycbj6.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                            <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+                <!--end yuanchuang -->
+                <!--begin bg-div -->
+                <div class="bg-div">
+                </div>
+                <!--end bg-div -->
+                <!--begin tv -->
+                <div class="month-hot month-hot4 month-hot5 month-hot6">
+                	<div class="month-hot-menu month-hot-menu2 clearfix">
+                        <div class="fl"><h3><a href="javascript:;">电视剧</a></h3><b id="tv_b"><a href="javascript:;" class="yc active">最新</a><a href="javascript:;" class="yc">大陆剧</a><a href="javascript:;" class="yc">日韩剧</a><a href="javascript:;" class="yc">英美剧</a><a href="javascript:;" class="yc">港台剧</a></b></div>
+                        <div class="fr clearfix"> <a href="javascript:;" ><i class="icon2 fl"></i></a><a href="javascript:;"><i class="icon3 fl"></i></a><a href="javascript:;" class="fl tvtop">电视剧排行</a>
+                        </div>
+                    </div>
+                    <div id="tv_c">
+                    <ul class="month-hot-list month-hot-list3 clearfix" id="tv1" style="display:block;">
+                    	<li class="bgw">
+                        <a href="javascript:;"><img src="img/tvbg1.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">解密 TV版</a><b></b></p>
+                        <p class="smt">"珍莉夫妇"上线玩转潜伏</p>
+                        </li>
+                        <li><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="crm"><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="gm"><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="gm"><a href="javascript:;"><img src="img/ycbg3.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                        <p class="smt">叛变甘当“肉盾”</p></li>
+                        <li class="gm"><a href="javascript:;"><img src="img/ycbj4.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="crm gm"><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                    </ul>
+                      <ul class="month-hot-list month-hot-list3 clearfix" id="tv2" style="display:none;">
+                    	<li class="bgw">
+                        <a href="javascript:;"><img src="img/tvbg1.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">解密 TV版</a><b></b></p>
+                        <p class="smt">"珍莉夫妇"上线玩转潜伏</p>
+                        </li>
+                        <li><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="crm"><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="gm"><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="gm"><a href="javascript:;"><img src="img/ycbg3.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                        <p class="smt">叛变甘当“肉盾”</p></li>
+                        <li class="gm"><a href="javascript:;"><img src="img/ycbj4.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="crm gm"><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                    </ul>
+                      <ul class="month-hot-list month-hot-list3 clearfix" id="tv3" style="display:none;">
+                    	<li class="bgw">
+                        <a href="javascript:;"><img src="img/zhangliu.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">解密 TV版</a><b></b></p>
+                        <p class="smt">"珍莉夫妇"上线玩转潜伏</p>
+                        </li>
+                        <li><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="crm"><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="gm"><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="gm"><a href="javascript:;"><img src="img/ycbg3.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                        <p class="smt">叛变甘当“肉盾”</p></li>
+                        <li class="gm"><a href="javascript:;"><img src="img/ycbj4.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="crm gm"><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                    </ul>
+                      <ul class="month-hot-list month-hot-list3 clearfix" id="tv4" style="display:none;">
+                    	<li class="bgw">
+                        <a href="javascript:;"><img src="img/tvbg1.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">解密 TV版</a><b></b></p>
+                        <p class="smt">"珍莉夫妇"上线玩转潜伏</p>
+                        </li>
+                        <li><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="crm"><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="gm"><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="gm"><a href="javascript:;"><img src="img/ycbg3.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                        <p class="smt">叛变甘当“肉盾”</p></li>
+                        <li class="gm"><a href="javascript:;"><img src="img/ycbj4.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="crm gm"><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                    </ul>
+                      <ul class="month-hot-list month-hot-list3 clearfix" id="tv5" style="display:none;">
+                    	<li class="bgw">
+                        <a href="javascript:;"><img src="img/tvbg1.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">解密 TV版</a><b></b></p>
+                        <p class="smt">"珍莉夫妇"上线玩转潜伏</p>
+                        </li>
+                        <li><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="crm"><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="gm"><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="gm"><a href="javascript:;"><img src="img/ycbg3.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                        <p class="smt">叛变甘当“肉盾”</p></li>
+                        <li class="gm"><a href="javascript:;"><img src="img/ycbj4.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="crm gm"><a href="javascript:;"><img src="img/tvbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                    </ul>
+                    </div>
+                </div>
+                <ul class="tv-list clearfix">
+                	<li><a href="javascript:;"><img src="img/huad1.png" alt=""/></a><p><a href="javascript:;">海伦凯勒眼镜玲珑剧场</a></p><a href="javascript:;"><i class="arrow1"></i></a></li>
+                    <li><a href="javascript:;"><img src="img/huad2.png" alt=""/></a><p><a href="javascript:;">海伦凯勒眼镜玲珑剧场</a></p></li>
+                    <li><a href="javascript:;"><img src="img/huad3.png" alt=""/></a><p><a href="javascript:;">海伦凯勒眼镜玲珑剧场</a></p></li>
+                    <li><a href="javascript:;"><img src="img/huad1.png" alt=""/></a><p><a href="javascript:;">海伦凯勒眼镜玲珑剧场</a></p></li>
+                    <li><a href="javascript:;"><img src="img/huad2.png" alt=""/></a><p><a href="javascript:;">海伦凯勒眼镜玲珑剧场</a></p></li>
+                    <li><a href="javascript:;"><img src="img/huad3.png" alt=""/></a><p><a href="javascript:;">海伦凯勒眼镜玲珑剧场</a></p><a href="javascript:;"><i class="arrow2"></i></a></li>
+                </ul>   
+            </div>
+                <!--end tv -->
+                <!--begin bg-div -->
+                <div class="bg-div">
+                </div>
+                <!--end bg-div -->
+                <!--begin fang theatre -->
+                <div class="month-hot month-hot7">
+                	<div class="month-hot-menu clearfix"><h3><a href="javascript:;">放剧场</a></h3></div>
+                    <ul class="month-hot-list clearfix" id="fang">
+                    	<li>
+                        <a href="javascript:;"><img src="img/fjbg1.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                        <p class="smt">叛变甘当“肉盾”</p>
+                        </li>
+                        <li><a href="javascript:;"><img src="img/topbg12.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                        <p class="smt">叛变甘当“肉盾”</p></li>
+                        <li><a href="javascript:;"><img src="img/monbg1.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                        <p class="smt">叛变甘当“肉盾”</p></li>
+                        <li><a href="javascript:;"><img src="img/monbg2.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                        <p class="smt">叛变甘当“肉盾”</p></li>
+                        <li><a href="javascript:;"><img src="img/monbg3.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                        <p class="smt">叛变甘当“肉盾”</p></li>
+                        <li class="crm"><a href="javascript:;"><img src="img/monbg4.png" alt=""/><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                        <p class="smt">叛变甘当“肉盾”</p></li>
+                    </ul>
+                </div>
+                <div class="advertising"><a href="javascript:;"><img src="img/adbg3.png" alt=""></a></div>
+                <!--end  fang theatre -->
+                <!--begin variety -->
+                <div class="month-hot month-hot4 month-hot5 month-hot6 month-hot8">
+                	<div class="month-hot-menu month-hot-menu2 clearfix">
+                        <div class="fl"><h3><a href="javascript:;">综艺</a></h3><b id="variety_b"><a href="javascript:;" class="yc active">热播综艺</a><a href="javascript:;" class="yc">大陆综艺</a><a href="javascript:;" class="yc">海外综艺</a><a href="javascript:;" class="yc">自制综艺</a></b></div>
+                        <div class="fr clearfix"><a href="javascript:;" class="fl tvtop">综艺排行</a>
+                        </div>
+                    </div>
+                    <div id="variety_c">
+                    <ul class="month-hot-list month-hot-list3 clearfix" id="variety1" style="display:block;">
+                    	<li class="bgw">
+                        <a href="javascript:;"><img src="img/mengfei.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">保守女突遭壮男亲吻 自认失节非嫁不可<b></b></a></p>
+                        <p class="smt">爱情保卫战2016</p>
+                        </li>
+                        <li><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="crm"><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="gm"><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="gm"><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                        <p class="smt">叛变甘当“肉盾”</p></li>
+                        <li class="gm"><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="crm gm"><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                    </ul>
+                    <ul class="month-hot-list month-hot-list3 clearfix" id="variety2" style="display:none;">
+                    	<li class="bgw">
+                        <a href="javascript:;"><img src="img/zongyi1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">保守女突遭壮男亲吻 自认失节非嫁不可<b></b></a></p>
+                        <p class="smt">爱情保卫战2016</p>
+                        </li>
+                        <li><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="crm"><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="gm"><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="gm"><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                        <p class="smt">叛变甘当“肉盾”</p></li>
+                        <li class="gm"><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="crm gm"><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                    </ul>
+                    <ul class="month-hot-list month-hot-list3 clearfix" id="variety3" style="display:none;">
+                    	<li class="bgw">
+                        <a href="javascript:;"><img src="img/zongyi1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">保守女突遭壮男亲吻 自认失节非嫁不可<b></b></a></p>
+                        <p class="smt">爱情保卫战2016</p>
+                        </li>
+                        <li><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="crm"><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="gm"><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="gm"><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                        <p class="smt">叛变甘当“肉盾”</p></li>
+                        <li class="gm"><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="crm gm"><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                    </ul>
+                    <ul class="month-hot-list month-hot-list3 clearfix" id="variety4" style="display:none;">
+                    	<li class="bgw">
+                        <a href="javascript:;"><img src="img/mengfei.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">保守女突遭壮男亲吻 自认失节非嫁不可<b></b></a></p>
+                        <p class="smt">爱情保卫战2016</p>
+                        </li>
+                        <li><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="crm"><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="gm"><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="gm"><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                        <p class="smt">叛变甘当“肉盾”</p></li>
+                        <li class="gm"><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                        <li class="crm gm"><a href="javascript:;"><img src="img/zongyi2.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">三分钟明白知识为何如此重要<b></b></a></p>
+                        <p class="smt">10.9万次播放&nbsp;&nbsp;&nbsp;207次评论</p></li>
+                    </ul>
+                    </div>
+                </div>
+                <!--end variety -->
+                <!--begin bg-div -->
+                <div class="bg-div">
+                </div>
+                <!--end bg-div -->
+                <!--begin video -->
+                <div class="month-hot month-hot4 month-hot5 month-hot6 month-hot8 month-hot9">
+                	<div class="month-hot-menu month-hot-menu2 clearfix">
+                        <div class="fl"><h3><a href="javascript:;">电影</a></h3><b id="video_b"><a href="javascript:;" class="yc active">最新</a><a href="javascript:;" class="yc">壹影院</a><a href="javascript:;" class="yc">好莱坞</a><a href="javascript:;" class="yc">预告片</a><a href="javascript:;" class="yc">微影院</a></b></div>
+                        <div class="fr clearfix"><a href="javascript:;" class="fl tvtop">电影排行</a>
+                        </div>
+                    </div>
+                    <div id="video_c">
+                    <ul class="month-hot-list month-hot-list3   month-hot-list4 clearfix" id="video1" style="display:block;">
+                    	<li>
+                        <a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p>
+                        </li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li class="wh"><a href="javascript:;"><img src="img/videor.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p><i class="arrow2"></i></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li class="wh"><a href="javascript:;"><img src="img/videor.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p><i class="arrow2"></i></li>
+                    </ul>
+                    <ul class="month-hot-list month-hot-list3   month-hot-list4 clearfix" id="video2" style="display:none;">
+                    	<li>
+                        <a href="javascript:;"><img src="img/duli.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p>
+                        </li>
+                        <li><a href="javascript:;"><img src="img/duli.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/duli.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/duli.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/duli.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/duli.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/duli.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li class="wh"><a href="javascript:;"><img src="img/videor.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p><i class="arrow2"></i></li>
+                        <li><a href="javascript:;"><img src="img/duli.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/duli.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/duli.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/duli.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/duli.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/duli.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li class="wh"><a href="javascript:;"><img src="img/videor.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p><i class="arrow2"></i></li>
+                    </ul>
+                    <ul class="month-hot-list month-hot-list3   month-hot-list4 clearfix" id="video3" style="display:none;">
+                    	<li>
+                        <a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p>
+                        </li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li class="wh"><a href="javascript:;"><img src="img/videor.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p><i class="arrow2"></i></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li class="wh"><a href="javascript:;"><img src="img/videor.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p><i class="arrow2"></i></li>
+                    </ul>
+                    <ul class="month-hot-list month-hot-list3   month-hot-list4 clearfix" id="video4" style="display:none;">
+                    	<li>
+                        <a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p>
+                        </li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li class="wh"><a href="javascript:;"><img src="img/videor.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p><i class="arrow2"></i></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li class="wh"><a href="javascript:;"><img src="img/videor.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p><i class="arrow2"></i></li>
+                    </ul>
+                    <ul class="month-hot-list month-hot-list3   month-hot-list4 clearfix" id="video5" style="display:none;">
+                    	<li>
+                        <a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p>
+                        </li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li class="wh"><a href="javascript:;"><img src="img/videor.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p><i class="arrow2"></i></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li><a href="javascript:;"><img src="img/video1.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p></li>
+                        <li class="wh"><a href="javascript:;"><img src="img/videor.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">疯狂动物城<b></b></a></p>
+                        <p class="smt">没看的已无法愉快聊天</p><i class="arrow2"></i></li>
+                    </ul>
+                    </div>
+                </div>
+                <!--end video -->
+                <!--begin bg-div -->
+                <div class="bg-div">
+                </div>
+                <!--end bg-div -->
+                <!--begin kartoon -->
+                <div class="month-hot month-hot7 month-hot10">
+                	<div class="month-hot-menu clearfix"><h3><a href="javascript:;">动漫</a></h3></div>
+                    <ul class="month-hot-list clearfix" id="kartoon">
+                    	<li>
+                        <a href="javascript:;"><img src="img/cartoon.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a>
+                        <p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                        <p class="smt">叛变甘当“肉盾”</p>
+                        </li>
+                        <li><a href="javascript:;"><img src="img/cartoon.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                        <p class="smt">叛变甘当“肉盾”</p></li>
+                        <li><a href="javascript:;"><img src="img/cartoon.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                        <p class="smt">叛变甘当“肉盾”</p></li>
+                        <li><a href="javascript:;"><img src="img/cartoon.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                        <p class="smt">叛变甘当“肉盾”</p></li>
+                        <li><a href="javascript:;"><img src="img/cartoon.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                        <p class="smt">叛变甘当“肉盾”</p></li>
+                        <li class="crm"><a href="javascript:;"><img src="img/cartoon.png" alt=""><b><i class="month-bg"></i><i class="month-pic"></i></b></a><p><a href="javascript:;">&lt;极挑&gt;蒋劲夫被俘追杀张艺兴<b></b></a></p>
+                        <p class="smt">叛变甘当“肉盾”</p></li>
+                    </ul>
+                </div>
+                <!--end kartoon -->
+                
+            <!--end b-main-content -->
+        </div>
+        <!--end main-content-->
+        </div>
+        <!--end content -->
+    </div>
+    <!--end container-->
+</body>
+</html>

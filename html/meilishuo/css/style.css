@@ -1,0 +1,586 @@
+@charset "utf-8";
+/* CSS Document */
+.container{
+	width:1200px;
+	margin:0 auto;
+}
+.loginbar{
+	width:1200px;
+	height:30px;
+	border-bottom:1px solid #eee;
+	position:fixed;
+	z-index:1;
+	background:#fff;
+}
+.loginbar .loginbar_nav{
+	margin-top:5px;
+}
+.loginbar .loginbar_nav li{
+	float:left;
+	padding:0 15px;
+	border-right:1px dashed #ccc;
+	font:12px "微软雅黑";
+	line-height:19px;
+}
+.loginbar .loginbar_nav .help{
+	border-right:none;
+}
+.loginbar .loginbar_nav .weixin{
+	background:url(../img/weixin.png) no-repeat;
+	width:19px;
+	height:16px;
+	margin-right:6px;
+	margin-top:2px;
+}
+.loginbar .loginbar_nav .qq{
+	background:url(../img/qq.png) no-repeat;
+	width:19px;
+	height:16px;
+	margin-right:6px;
+	margin-top:2px;
+}
+.loginbar .loginbar_nav .car{
+	background:url(../img/car.png) no-repeat;
+	width:19px;
+	height:16px;
+	margin-right:6px;
+	margin-top:2px;
+}
+.loginbar .loginbar_nav .txt{
+	background:url(../img/txt.png) no-repeat;
+	width:19px;
+	height:16px;
+	margin-right:6px;
+	margin-top:2px;
+}
+.loginbar .loginbar_nav .vip{
+	background:url(../img/hg.png) no-repeat;
+	width:19px;
+	height:16px;
+	margin-right:6px;
+	margin-top:2px;
+}
+.loginbar .loginbar_nav .phone{
+	background:url(../img/phone.png) no-repeat;
+	width:19px;
+	height:16px;
+	margin-right:6px;
+	margin-top:2px;
+}
+.loginbar .loginbar_nav .arrows{
+	background:url(../img/arrows.png) no-repeat;
+	width:19px;
+	height:16px;
+	margin-left:1px;
+	margin-top:7px;
+}
+.loginbar .loginbar_nav .num{
+	width:19px;
+	height:14px;
+	background:#f69;
+	text-align:center;
+	line-height:14px;
+	color:#fff;
+	margin-left:1px;
+	margin-top:3px;
+}
+/*登录条结束*/
+/*搜索栏开始*/
+
+.search{
+	position:relative;
+}
+.search .logo{
+	width:276px;
+	height:43px;
+	background:url(../img/logo.png) no-repeat;
+	margin-top:39px;
+	text-indent:-9999em;
+	cursor:pointer;
+}
+.search .higo{
+	width:143px;
+	height:45px;
+	background:url(../img/higo.png) no-repeat;
+	margin-top:39px;
+	text-indent:-9999em;
+	cursor:pointer;
+}
+.search .nav{
+	width:519px;
+	position:absolute;
+	top:21px;
+	left:360px;
+}
+.search .nav a{
+	float:left;
+	width:56px;
+	height:24px;
+	color:#666;
+	font:12px "微软雅黑";
+	background:#f2f2f2;
+	text-align:center;
+	line-height:24px;
+}
+.search .nav .active{
+	background:#ff6699;
+	color:#fff;
+}
+.search .nav_text input{
+	width:445px;
+	height:28px;
+	border:2px solid #ff6699;
+	padding-left:8px;
+}
+.search .nav_text a{
+	width:62px;
+	height:32px;
+	background:url(../img/search.png) no-repeat 50% 50% #ff6699;
+	
+}
+/*搜索栏结束*/
+/*正文开始*/
+.content{
+	margin-top:36px;
+}
+.content .nav{
+	border-bottom:2px solid #f69;
+}
+.content .nav a{
+	float:left;
+	font:14px "微软雅黑";
+	color:#333;
+	padding:0 21px;
+	line-height:48px;
+}
+.content .nav .active{
+	color:#f69;
+}
+.column ul{
+	width:198px;
+	height:572px;
+	border:1px solid #ccc;
+	padding:0 20px;
+}
+.column ul li{
+	border-bottom:1px dashed #ccc;
+	padding-top:16px;
+	padding-bottom:12px;
+}
+.column ul .cb{
+	border:none;
+}
+.column ul h3{
+	font:bold 14px/1 "微软雅黑";
+	color:#f69;
+}
+.column ul a{
+	font:12px/1 "微软雅黑";
+	color:#727272;
+	float:left;
+	margin-right:15px;
+	margin-top:12px;
+}
+/*左侧菜单栏结束*/
+.banner_hot .top{
+	width:960px;
+	height:420px;
+	position:relative;
+}
+
+.prev,.next{
+	width:34px;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	background:url(../img/hot2.png) no-repeat #000;
+	opacity:0.6;
+	filter:alpha(opacity:30);
+	position:absolute;
+	top:50%;
+	margin-top:-20px;
+	display:none;
+}
+.next{
+	right:0;
+	background-position:-34px 0;
+}
+.top:hover a{
+	display:block;
+}
+
+.top .list1 li{
+	float:left;
+	width:19px;
+	height:19px;
+	background:url(../img/hot4.png) no-repeat 50% 50%;
+	margin-right:26px;
+}
+	
+.top .list1{
+	position:absolute;
+	bottom:16px;
+	left:50%;
+	margin-left:-90px;
+}
+.list1 li:hover{
+	background:url(../img/hot3.png) no-repeat 50% 50%;
+}
+.hot{
+	margin-top:9px;
+}
+.hot a{
+	float:left;
+	width:182px;
+	height:145px;
+	background:url(../img/bg.png) no-repeat;
+	
+	margin-left:10px;
+}
+/*轮播图结束*/
+/*疯狂星期五开始*/
+.crazy {
+	margin-top:45px;
+	margin-bottom:47px;
+}
+.title{
+	border-bottom:1px solid #ededed;
+	position:relative;
+	padding-bottom:5px;
+	margin-bottom:19px;
+	height:16px;
+}
+.title_left{
+	height:22px;
+}
+.title h3{
+	font:bold 20px/1 "微软雅黑";
+	color:#666;
+	background:#fff;
+}
+.title .s1{
+	font:12px/1 "微软雅黑";
+	color:#999;
+	margin-left:10px;
+	padding-right:4px;
+	margin-top:7px;
+}
+.title .s2 a{
+	color:#666;
+	font:12px "微软雅黑";
+	padding-right:10px;
+	background:url(../img/crazy1.png) no-repeat 100% 50%;;
+}
+.title_left{
+	position:absolute;
+    background:#fff;
+}
+.crazy_pic .list{
+	width:387px;
+	float:left;
+}
+.crazy_pic .list li{
+	float:left;
+	
+}
+.crazy_pic .list li a{
+	float:left;	
+}
+.crazy_pic .list .u1{
+	margin-left:2px;
+	margin-bottom:2px;
+}
+.crazy_pic .list1{
+	margin-left:20px;
+	margin-right:19px;
+}
+.crazy2 .list2 li{
+	float:left;
+	margin-right:20px;
+}
+.crazy3 .list2 li a{
+	display:block;
+}
+.crazy2 .list2 .u2{
+	margin-right:0;
+}
+.crazy2{
+	margin-bottom:45px;
+}
+.crazy3 .list3 li{
+	width:225px;
+	margin-right:18px;
+	float:left;
+	margin-bottom:42px;
+}
+.crazy3 .list3 li a{
+	display:block;
+}
+.crazy3 .list3 .s1{
+	font:17px/1 "微软雅黑";
+	color:#f69;
+}
+.crazy3 .list3 .s2{
+	font:12px/1 "微软雅黑";
+	color:#969595;
+	padding-left:10px;
+	background:url(../img/crazy3pic2.png) no-repeat 0 50%;
+}
+.crazy3 .s3{
+	font:12px/1 "微软雅黑";
+	color:#666;
+}
+.crazy3 .d1{
+	margin-top:19px;
+	margin-bottom:10px;
+}
+.crazy3 .list3 .cm{
+	margin-right:0px;
+}
+.crazy4 .title{
+	margin-top:6px;
+}
+.crazy4 .list4 li{
+	width:387px;
+	margin-right:19px;
+}	
+.crazy4 .list4 .s1{
+	font:12px/1 "微软雅黑";
+	color:#f69;
+}
+.crazy4 .list4 .s2{
+	font:17px/1 "微软雅黑";
+	color:#f69;	
+}
+.crazy4 .list4 .s3{
+	font:12px/1 "微软雅黑";
+	color:#999;
+	text-decoration:line-through;
+	padding-left:15px;
+}
+.crazy4 .list4 .p1{
+	font:14px/1 "微软雅黑";
+	color:#666;
+	margin-top:13px;
+	margin-bottom:5px;
+}
+.crazy4 .list4 .p2{
+	font:12px/1 "微软雅黑";
+	color:#999;
+	line-height:22px;
+}
+
+.crazy4 .list4 li{
+	float:left;
+}
+.crazy4 .list4 li a{
+	display:block;
+}
+.crazy4 .list4 .u4{
+	margin-right:0;
+}
+.crazy4 .list4 .d1{
+	margin-top:23px;
+}
+.crazy5 .title{
+	margin-top:53px;
+}
+.crazy5 .list5 li{
+	width:387px;
+	float:left;
+}
+.crazy5 .list5 .u1{
+	margin:0 19px;
+}
+.crazy5 .list5 .d1{
+	font:17px/1 "微软雅黑";
+	color:#f69;	
+	margin-top:24px;
+}
+.crazy5 .list5 .p1{
+	font:14px/1 "微软雅黑";
+	color:#666;
+	margin-top:13px;
+	margin-bottom:5px;
+}
+.crazy5 .list5 .p2{
+	font:12px/1 "微软雅黑";
+	color:#999;
+	line-height:22px;
+}
+.crazy5 .list5 .d2{
+	margin-top:10px;
+	padding-left:40px;
+	background:url(../img/crazy5pic2.png) no-repeat 5px 50%;
+	line-height:19px;
+}
+.crazy5 .list5 .d2 a{
+	font:12px/1 "微软雅黑";
+	color:#f69;	
+
+}
+.crazy5{
+	margin-bottom:45px;
+}
+.crazy6 .title_list{
+	width:535px;
+	margin:0 auto;
+}
+.crazy6 .title_list a{
+	float:left;
+	font:16px/1 "微软雅黑";
+	color:#666;
+	margin-right:42px;
+}
+.crazy6 .title_list .active{
+	color:#f69;
+	border-bottom:2px solid #f69;
+}
+.crazy6 .pic{
+	width:387px;
+}
+.crazy6 .list6 li{
+	float:left;
+}
+.crazy6 .list6 .u1{
+	margin-left:2px;
+	margin-bottom:2px;
+}
+.pic h3{
+	font:22px/1 "微软雅黑";
+	color:#666;
+	text-align:center;
+	margin-top:20px;
+}
+.pic p{
+	font:12px/1 "微软雅黑";
+	color:#999;
+	margin-top:9px;
+}
+.pic .d1 span{
+	font:12px/1 "微软雅黑";
+	color:#666;
+}
+.pic .d1 b{
+	font:12px/1 "微软雅黑";
+	color:#f69;
+}
+.pic .d1{
+	padding-left:123px;
+	margin-top:13px;
+}
+.pic{
+	margin-top:20px;
+	margin-right:19px;
+}
+.pic2{
+	margin-right:0;
+}
+.pic .list6 li a{
+	display:block;
+}
+.crazy7 .title .s2 a{
+	color:#666;
+	font:12px "微软雅黑";
+	padding-right:15px;
+	background:url(../img/crazy7pic1.png) no-repeat 100% 50%;
+}
+.crazy7 .list3 li{
+	width:225px;
+	margin-right:18px;
+	float:left;
+	margin-bottom:42px;
+}
+.crazy7 .list3 li a{
+	display:block;
+}
+.crazy7 .list3 .s1{
+	font:17px/1 "微软雅黑";
+	color:#f69;
+}
+.crazy7 .list3 .s2{
+	font:12px/1 "微软雅黑";
+	color:#969595;
+	padding-left:10px;
+	background:url(../img/crazy3pic2.png) no-repeat 0 50%;
+}
+.crazy7 .s3{
+	font:12px/1 "微软雅黑";
+	color:#666;
+}
+.crazy7 .d1{
+	margin-top:19px;
+	margin-bottom:10px;
+}
+.crazy7 .list3 .cm{
+	margin-right:0px;
+}
+.crazy7{
+	margin-top:52px;
+	margin-bottom:32px;
+}
+/*正文结束*/
+.foot .about .list1 .u1{
+	font:18px/1 "微软雅黑";
+	color:#666;
+}
+.about .list1{
+	padding-left:48px;
+	background:url(../img/foot1.png) no-repeat 0 0;
+}
+.about li,.about dd{
+	font:12px/1 "微软雅黑";
+	color:#666;
+}
+.about .u2{
+	margin-top:13px;
+}
+.about dd{
+	margin-top:15px;
+}
+.about dt{
+	font:bold 16px/1 "微软雅黑";
+	color:#666;	
+}
+.about dl{
+	margin-left:49px;
+}
+.about .list2 dd{
+	height:16px;
+	line-height:16px;
+	padding-left:21px;
+	background:url(../img/sina.png) no-repeat 0 50%;
+}
+.about{
+	border-top:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+	padding-top:34px;
+	padding-bottom:29px;
+}
+.foot .friends{
+	font:12px/1 "微软雅黑";
+	color:#666;	
+	padding-left:7px;
+	line-height:30px;
+	border-bottom:1px solid #ddd;
+}
+.foot .friends a{
+	color:#666;	
+	float:left;
+	margin-left:7px;
+}
+.foot .friends .a1{
+	float:right;
+	margin-right:23px;
+}
+.foot p{
+	font:12px/1 "微软雅黑";
+	color:#666;	
+	margin-top:16px;
+}
+.foot .control{
+	padding-bottom:16px;
+}
+.foot{
+	background:#f5f5f5;
+}
