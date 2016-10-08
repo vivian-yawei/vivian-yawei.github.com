@@ -3,31 +3,139 @@
 <head>
 <meta charset="utf-8">
 <title>无标题文档</title>
-<script src="../js/sound.js"></script>
 <style>
-	*{ padding:0; margin:0;}
-	ul{ width:100%; overflow:hidden; list-style:none;}
-	li{ height:300px; width:calc(100%/8); float:left; background:yellow; border:1px solid #000; 
-	box-sizing:border-box;}
-	.now{ background:#CCC;}
+*{
+	padding:0;
+	margin:0;
+}
+body{
+	overflow:hidden;
+	background:#000;
+}
+#box{
+	border:1px solid #909;
+}
 </style>
 <script>
-	window.onload=function(){
-		var oUl=document.querySelector('ul');
-		var aLi=oUl.children;
-		
-		var oA=new Audio();
-		document.onkeydown=function(ev){
-			if(ev.keyCode>=49 && ev.keyCode<=56){
-				oA.src=oggSound['sound'+ev.keyCode];
-				oA.play();
-				aLi[ev.keyCode-49].className='now';
+function rnd(n,m){
+	return parseInt(Math.random()*(m-n)+n);
+}
+window.onload=function(){
+	var oC=document.querySelector('#box');
+	var gd=oC.getContext('2d');
+	oC.width=document.documentElement.clientWidth;
+	oC.height=document.documentElement.clientHeight;
+	//五个点
+	var aPl=5;
+	//点的大小
+	var w=1;
+	var h=1;
+	var LEN=100;
+	var aPointarr=[];
+	/*
+			[
+				{
+					x:100,
+					y:100,
+					speedx:-3,
+					speedy:3
+				}
+			]
+		*/
+	var aPoint=[];
+	/*
+			[
+				[
+					{
+						x:x,
+						x:y,
+					},
+					{
+						x:x,
+						x:y,
+					}
+				],
+				[
+					{
+						x:x,
+						x:y,
+					},
+					{
+						x:x,
+						x:y,
+					}
+				],
+			]
+	*/
+	//生成每个点的坐标以及速度 并且 保存到 数组里
+	//gd.strokeStyle='#FFF';
+	for(var i=0;i<aPl;i++){
+		var x=rnd(0,oC.width-w);
+		var y=rnd(0,oC.height-h);
+		var speedX=rnd(-5,6);
+		var speedY=rnd(-5,6);
+		aPointarr.push({x:x,y:y,speedx:speedX,speedy:speedY});
+	}
+	setInterval(function(){
+		gd.clearRect(0,0,oC.width,oC.height);
+		var arr=[];
+		for(var i=0;i<aPl;i++){
+			aPointarr[i].x+=aPointarr[i].speedx;
+			aPointarr[i].y-=aPointarr[i].speedy;
+			if(aPointarr[i].x<0){
+				aPointarr[i].x=0;
+				aPointarr[i].speedx*=-1;
 			}
-		};
-		
-		document.onkeyup=function(ev){
-			aLi[ev.keyCode-49].className='';	
+			if(aPointarr[i].x>oC.width-w){
+				aPointarr[i].x=oC.width-w;
+				aPointarr[i].speedx*=-1;
+			}
+			if(aPointarr[i].y<0){
+				aPointarr[i].y=0;
+				aPointarr[i].speedy*=-1;
+			}
+			if(aPointarr[i].y>oC.height-h){
+				aPointarr[i].y=oC.height-h;
+				aPointarr[i].speedy*=-1;
+			}
+			arr[i]={x:aPointarr[i].x,y:aPointarr[i].y};
+			gd.fillRect(aPointarr[i].x,aPointarr[i].y,w,h);
 		}
+		//画线
+		gd.beginPath();
+		gd.moveTo(aPointarr[0].x,aPointarr[0].y);
+		for(var i=1;i<aPointarr.length;i++){
+			gd.lineTo(aPointarr[i].x,aPointarr[i].y);
+		}
+		gd.closePath();
+		gd.stroke();
+		//阴影
+		aPoint.push(arr); 
+		if(aPoint.length==LEN){
+			aPoint.shift();
+		}
+		//遍历大数组
+		
+		for(var i=0;i<aPoint.length;i++){
+			var a=rnd(0,256);
+			gd.strokeStyle='rgba('+a+',255,255,'+i/aPoint.length+')';
+			gd.beginPath();
+			gd.moveTo(aPoint[i][0].x,aPoint[i][0].y);
+			for(var j=1;j<aPoint[i].length;j++){
+				gd.lineTo(aPoint[i][j].x,aPoint[i][j].y);
+			}
+			gd.closePath();
+			gd.stroke();
+		}
+	},16);	
+};
+</script>
+</head>
+
+<body>
+<canvas id="box" width="800" height="500"></canvas>
+</body>
+</html>
 		
 		
 		
