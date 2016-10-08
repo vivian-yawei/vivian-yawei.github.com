@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹性运动</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 微软雅黑;
+        }
+
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background: red;
+            position: absolute;
+            left: 0px;
+            top: 30px;
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            var oDiv=document.getElementById('div1');
+            var speed=0;
+            var left=0; //用来算每次跑到哪
+
+            var timer=setInterval(function(){
+
+                speed+=(300-oDiv.offsetLeft)/5;//加速度
+                speed*=0.8; //  摩擦力，加速度衰减
+
+                left=left+speed;    //记录小数
+
+				 console.log(speed);
+                oDiv.style.left=Math.round(left)+'px';
+				//console.log(oDiv.offsetLeft);
+                if(speed<1 && 300-oDiv.offsetLeft==0){//停止条件
+                    clearInterval(timer);
+                    console.log(speed);
+                }
+            },30);
+        };
+    </script>
+</head>
+<body>
+
+<div id="div1"></div>
+
+</body>
+</html>

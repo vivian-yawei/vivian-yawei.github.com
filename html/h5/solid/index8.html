@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3自定义动画</title>
+<style>
+	
+	@keyframes run{
+		25%{
+			margin-left:300px;
+			margin-top:0;	
+			background:yellow;
+		}	
+		50%{
+			margin-top:300px;
+			margin-left:300px;
+			background:green;		
+		}
+		75%{
+			margin-left:0;
+			margin-top:300px;
+			background:blue;	
+		}
+		100%{
+			margin-top:0;
+			margin-left:0;
+			background:red;
+			transform:rotate(360deg);
+		}
+	}
+	
+	div{ animation:4s linear run infinite; width:200px; height:200px; background:red;}
+	
+</style>
+
+</head>
+
+<body>
+	<div></div>
+</body>
+</html>

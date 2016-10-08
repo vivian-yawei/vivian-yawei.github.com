@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无缝滚动</title>
+<style>
+	
+	@keyframes run{
+		to{
+			transform:translateX(-600px);		
+		}
+	}
+
+	*{ padding:0; margin:0; list-style:none;}
+	div{width:600px; margin:100px auto; border:1px solid red; overflow:hidden;}
+	ul{ width:200%; animation:run 3s linear infinite;}
+	li{ width:130px; float:left; margin:10px;}
+	img{ width:100%;}
+	
+	div:hover ul{ animation-play-state:paused;}
+</style>
+
+</head>
+
+<body>
+	<div>
+        <ul>
+            <li><img src="../img3/1.jpg" /></li>
+            <li><img src="../img3/2.jpg" /></li>
+            <li><img src="../img3/3.jpg" /></li>
+            <li><img src="../img3/4.jpg" /></li>
+            
+            <li><img src="../img3/1.jpg" /></li>
+            <li><img src="../img3/2.jpg" /></li>
+            <li><img src="../img3/3.jpg" /></li>
+            <li><img src="../img3/4.jpg" /></li>
+        </ul>
+    </div>
+</body>
+</html>

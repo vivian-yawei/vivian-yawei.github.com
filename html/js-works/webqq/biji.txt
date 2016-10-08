@@ -1,0 +1,10 @@
+webQQ:
+	ajax	我们封装的不能跨域	
+	不搭建wamp,可以用jsonp么？	可以
+	
+	异步，同步
+	alert()	confirm prompt	同步(不影响代码执行顺序)
+
+	setInterval/setTimeout/ajax网络请求	异步	
+
+	jsonp  创建script--->DOM--->http请求

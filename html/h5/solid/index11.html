@@ -1,0 +1,45 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+<title>Hello, World</title>  
+<style type="text/css">  
+html{height:100%}  
+body{height:100%;margin:0px;padding:0px}  
+#container{ height:100%;}  
+</style>  
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=FDbPe4CVNYNRrgfQKjN8vHm77sl0MGxK"></script>
+</head>  
+ 
+<body>  
+<input type="text" id="info" />
+<input type="button" value="搜索" />
+<div id="container"></div> 
+<script type="text/javascript"> 
+
+	var oT=document.querySelectorAll('input')[0];
+	var oBtn=document.querySelectorAll('input')[1];
+
+	var map = new BMap.Map("container");         // 创建地图实例  
+	var point = new BMap.Point(121.4501, 31.1574);  // 创建点坐标  
+	map.centerAndZoom(point, 15);
+
+	
+	//滚轮缩放地图
+	map.enableScrollWheelZoom();
+
+
+	var circle = new BMap.Circle(point,1000,{fillColor:"blue", strokeWeight: 1 ,fillOpacity: 0.3, strokeOpacity: 0.3});
+    
+    var local =  new BMap.LocalSearch(map, {renderOptions: {map: map, autoViewport: false}});  
+   
+   	oBtn.onclick=function(){
+		map.addOverlay(circle);
+		local.searchNearby(oT.value,point,1000);	
+	};
+   
+	
+</script>  
+</body>  
+</html>

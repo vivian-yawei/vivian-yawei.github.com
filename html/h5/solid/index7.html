@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	body{ background:#000;}
+	*{ padding:0; margin:0; list-style:none;}
+	
+	ul{ position:absolute; top:50%; left:50%;  
+	width:133px; 
+	height:200px; margin-left:-67px; margin-top:-200px; transform-style:preserve-3d; 
+	transform:perspective(800px) rotateX(-10deg);}
+	li{ position:absolute; top:0; left:0; width:100%; height:100%; 
+	border-radius:6px; 
+	box-shadow:0 0 10px #FFF,0 0 20px #FFF; 
+	-webkit-box-reflect:below 10px -webkit-linear-gradient(rgba(0,0,0,0) 60%,rgba(0,0,0,0.5));}
+	
+	/*ul:hover li{ transform:rotateY(60deg) translateZ(200px);}*/
+</style>
+<script>
+	window.onload=function(){
+		var oList=document.querySelector('.list');
+		
+		//布局
+		var N=11;
+		for(var i=0; i<N;i++){
+			var oLi=document.createElement('li');
+			oLi.style.background='url(../img3/'+(i+1)+'.jpg)';
+			oList.appendChild(oLi);
+			
+			//添加过渡
+			oLi.style.transition='0.3s all ease '+(N-i)*100+'ms';
+			
+			//延迟执行动画
+			(function(obj,index){
+				setTimeout(function(){
+					obj.style.transform='rotateY('+(index*360/N)+'deg) translateZ(350px)';	
+				},0);	
+			})(oLi,i);
+		}
+		
+		var aLi=oList.children;
+		
+		var y=10*3;//y/3
+		var x=0;
+		
+		var speedX=0;
+		var speedY=0;
+		
+		var lastX=0;
+		var lastY=0;
+		
+		var timer=null;
+		
+		document.onmousedown=function(ev){
+			
+			var disX=ev.clientX-x;
+			var disY=ev.clientY-y;
+			document.onmousemove=function(ev){
+				x=ev.clientX-disX;
+				y=ev.clientY-disY;
+				change(x/3,y/3);
+				
+				speedX=ev.clientX-lastX;
+				speedY=ev.clientY-lastY;
+	
+				lastX=ev.clientX;
+				lastY=ev.clientY;
+			}
+			document.onmouseup=function(ev){
+				document.onmouseup=null;
+				document.onmousemove=null;
+			
+				
+				//console.log(speedX);
+				clearInterval(timer);
+				timer=setInterval(function(){
+					//y+=speedX*0.95;
+					speedX*=0.95;
+					speedY*=0.95;
+					x+=speedX;
+					y+=speedY;
+					
+					change(x/3,y/3);
+					
+					if(Math.abs(speedX)<1 && Math.abs(speedY)<1){
+						clearInterval(timer);
+						//alert('停止定时器');
+					}
+					
+				},30);
+					
+			};	
+			return false;
+		};
+		
+		function change(x,y){
+			oList.style.transform='perspective(800px) rotateX('+-y+'deg)';
+				
+			for(var i=0; i<aLi.length;i++){
+				//干掉过渡
+				aLi[i].style.transition='none';
+				aLi[i].style.transform='rotateY('+(i*360/N+x)+'deg) translateZ(350px)';	
+				var scale=Math.abs(Math.abs(i*360/N+x)%360-180)/180;
+				
+				aLi[i].style.opacity=scale;
+			}	
+		}
+		
+	};
+</script>
+</head>
+
+<body>
+	<ul class="list">
+    	
+    </ul>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="智能社 - zhinengshe.com" />
+<meta name="copyright" content="智能社 - zhinengshe.com" />
+<meta name="description" content="智能社是一家专注于web前端开发技术的公司，目前主要提供JavaScript培训和HTML5培训两项服务，同时还推出了大量javascript基础知识教程，智能课堂为你带来全新的学习方法和快乐的学习体验。" />
+<title>智能社— http://www.zhinengshe.com</title>
+<link rel="stylesheet" href="./Css/index.css" />
+<script src="Js/ajax.js"></script>
+<script>
+window.onload=function(){
+	var oAddWish=document.getElementById('send');
+	var oLightBox=document.getElementById('send-form');
+	var oUser=document.getElementById('username');
+	var oContent=document.getElementById('content');
+	var oSend=document.getElementById('send-btn');
+	var oClose=document.getElementById('close');
+	var oMain=document.getElementById('main');
+	var zIndex=2;
+	//1.添加事件控制高光盒
+	oAddWish.onclick=function(){
+		oLightBox.style.display='block';	
+	};	
+	oSend.onclick=function(){//2.发送愿望
+		oLightBox.style.display='none';
+		//2.发送愿望
+		//wish.php?act=add&username=xxx&content=xxx
+		ajax({
+			url:	'wish.php',
+			data:	{
+				act:	'add',
+				username:	oUser.value,
+				content:	oContent.value	
+			},
+			success:function(str){
+				//{error:1, msg:xxx, id: 心愿ID, time: 1435567718}
+				var json=eval('('+str+')');
+				if(json.error==0){
+					//dom
+					createWish(json.id,oUser.value,oContent.value,json.time);		
+				}
+			}
+		});
+	};	
+	function createWish(id,user,content,time){
+		var oDl=document.createElement('dl');
+		oDl.className='paper a'+rnd(1,6);
+		oDl.innerHTML=
+'<dt>\
+	<span class="username">'+user+'</span>\
+	<span class="num">'+fillZero(id)+'</span>\
+</dt>\
+<dd class="content">'+content+'</dd>\
+<dd class="bottom">\
+	<span class="time">'+time+'</span>\
+	<a href="javascript:;" class="close"></a>\
+</dd>';		
+		//4.	删除愿望
+		var oRemoveWish=oDl.getElementsByTagName('a')[0];
+		oRemoveWish.onclick=function(){
+			//alert(this.parentNode.parentNode);
+			//alert(oDl);
+			//alert(oRemoveWish);	
+			//wish.php?act=delete&id=0;
+			//window.confirm();
+			
+			var bl=confirm('确定要删除这条愿望嘛?');
+			if(bl){
+				ajax({
+					url:	'wish.php',
+					data:	{act:'delete',id:id},
+					success:function(str){
+						//{error:1, msg:xxx}
+						var json=eval('('+str+')');
+						if(json.error==0){
+							//dom操作
+							oDl.parentNode.removeChild(oDl);	
+						}
+					}	
+				});		
+			}
+			
+		};
+		
+		oMain.appendChild(oDl);	
+		
+		setPos(oDl)//定位函数
+		drag(oDl,oDl.children[0]);//添加拖拽	
+	}
+	oClose.onclick=function(){
+		oLightBox.style.display='none';	
+	};
+	
+	
+	//3.获取所有心愿
+	getWish();
+	function getWish(){
+		//wish.php?act=get	
+		ajax({
+			url:	'wish.php',
+			data:	{act:'get'},
+			success:function(str){
+				//{error:0, msg:[{'id':1, 'username':'xxx', 'content':'xxx', time: 1435567718},{},{},{}.......]}
+				var json=eval('('+str+')');	
+				if(json.error==0){
+					var arr=json.msg;
+					for(var i=0;i<arr.length;i++){
+						createWish(arr[i].id,arr[i].username,arr[i].content,arr[i].time);	
+					}
+				}
+			}	
+		});
+	}
+	
+	
+	
+	
+	function setPos(oDl){
+		oDl.style.left=rnd(0,oMain.offsetWidth-oDl.offsetWidth)+'px';
+		oDl.style.top=rnd(0,document.documentElement.clientHeight-126-oDl.offsetHeight)+'px';
+	}
+	
+	function drag(oDl,dt){
+		dt.onmousedown=function(ev){
+			oDl.style.zIndex=zIndex++;
+			oDl.style.opacity=.5;
+			var e=ev||event;	
+			var disX=e.clientX-oDl.offsetLeft;
+			var disY=e.clientY-oDl.offsetTop;
+			document.onmousemove=function(ev){
+				var e=ev||event;
+				var l=e.clientX-disX;
+				var t=e.clientY-disY;
+				if(l<0)l=0;
+				if(l>oMain.offsetWidth-oDl.offsetWidth)
+				l=oMain.offsetWidth-oDl.offsetWidth;
+				if(t<0)t=0;
+				if(t>document.documentElement.clientHeight-oDl.offsetHeight-126)
+				t=document.documentElement.clientHeight-oDl.offsetHeight-126;
+				oDl.style.left=l+'px';
+				oDl.style.top=t+'px';	
+			};
+			document.onmouseup=function(){
+				document.onmousemove=document.onmouseup=null;	
+				oDl.style.opacity=1;
+			};
+			return false;
+		};
+	}
+};
+
+function rnd(n,m){
+	return parseInt(n+Math.random()*(m-n));	
+}
+function fillZero(n){
+	//No.00001
+	if(n<10){
+		return 'No.0000'+n;
+	}else if(n>=10 && n<100){
+		return 'No.000'+n;	
+	}else if(n>=100 && n<1000){
+		return 'No.00'+n;	
+	}else if(n>=1000 && n<10000){
+		return 'No.0'+n;	
+	}else if(n>=10000 && n<100000){
+		return 'No.'+n;	
+	}
+}
+</script>
+</head>
+<body>
+<div id="top">
+    <span id="send"></span>
+</div>
+<div id="main">
+    <!--<dl class="paper a5">
+        <dt>
+            <span class="username">智能社</span>
+            <span class="num">No.00001</span>
+        </dt>
+        <dd class="content">欢迎来到智能社</dd>
+        <dd class="bottom">
+            <span class="time">今天08:30</span>
+            <a href="javascript:;" class="close"></a>
+        </dd>
+    </dl>-->
+</div>
+
+<div id="send-form">
+    <p class="title"><span>许下你的愿望</span><a href="javascript:;" id="close"></a></p>
+    <form action="" name="wish">
+        <p>
+            <label for="username">昵称：</label>
+            <input type="text" name="username" id="username"/>
+        </p>
+        <p>
+            <label for="content">愿望：(您还可以输入&nbsp;<span id="font-num">50</span>&nbsp;个字)</label>
+            <textarea name="content" id="content"></textarea>
+            <div id="phiz">
+                <img src="./Images/phiz/zhuakuang.gif" alt="抓狂" />
+                <img src="./Images/phiz/baobao.gif" alt="抱抱" />
+                <img src="./Images/phiz/haixiu.gif" alt="害羞" />
+                <img src="./Images/phiz/ku.gif" alt="酷" />
+                <img src="./Images/phiz/xixi.gif" alt="嘻嘻" />
+                <img src="./Images/phiz/taikaixin.gif" alt="太开心" />
+                <img src="./Images/phiz/touxiao.gif" alt="偷笑" />
+                <img src="./Images/phiz/qian.gif" alt="钱" />
+                <img src="./Images/phiz/huaxin.gif" alt="花心" />
+                <img src="./Images/phiz/jiyan.gif" alt="挤眼" />
+            </div>
+        </p>
+        <span id="send-btn"></span>
+    </form>
+</div>
+<!--[if IE 6]>
+<script type="text/javascript" src="./Js/iepng.js"></script>
+<script type="text/javascript">
+    DD_belatedPNG.fix("#send,#close,.close","background");
+</script>
+<![endif]-->
+</body>
+</html>

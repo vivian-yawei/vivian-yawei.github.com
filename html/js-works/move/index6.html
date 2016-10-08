@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>球碰撞运动</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 微软雅黑;
+        }
+
+        .drag {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            left: 0%;
+            top: 0%;
+
+            border-radius:50%;
+        }
+
+    </style>
+
+    <script>
+        window.onload =function(){
+            //10秒内，随机出现50个盒子
+            for(var i=0;i<50;i++){
+                setTimeout(function(){
+                    var oBox=document.createElement('div');
+                    oBox.className='drag';
+                    document.body.appendChild(oBox);
+                    var r=rnd(0,256);
+                    var g=rnd(0,256);
+                    var b=rnd(0,256);
+                    oBox.style.background='rgb('+r+','+g+','+b+')';
+                    move(oBox,rnd(1,30),rnd(1,30));
+                    drag(oBox);
+                },Math.random()*10000)
+            }
+        };
+        function rnd(n,m){return parseInt(n+Math.random()*(m-n))}
+        function drag(oDiv) {
+            var lastX,lastY=0;
+            var speedX,speedY=0;
+            oDiv.onmousedown=function(ev){
+                clearInterval(oDiv.timer);
+
+                lastX=oDiv.offsetLeft;//按下记录的last是odiv.left
+                lastY=oDiv.offsetTop;
+
+                var e=ev||event;
+                var disX= e.clientX-oDiv.offsetLeft;
+                var disY= e.clientY-oDiv.offsetTop;
+                document.onmousemove=function(ev){
+                    var e=ev||event;
+                    oDiv.style.left= e.clientX-disX+'px';
+                    oDiv.style.top= e.clientY-disY+'px';
+
+                    //计算速度
+                    speedX=oDiv.offsetLeft-lastX;
+                    speedY=oDiv.offsetTop-lastY;
+
+                    lastX=oDiv.offsetLeft;//最后一次坐标
+                    lastY=oDiv.offsetTop;
+
+                }
+                document.onmouseup=function(){
+                    document.onmousemove=null;
+                    document.onmouseup=null;
+
+                    console.log(speedX,speedY);
+                    move(oDiv,speedX,speedY);//碰撞运动
+                };
+                return false;
+            };
+
+
+        };
+        function move(obj,speedX,speedY){
+            clearInterval(obj.timer);
+            obj.timer=setInterval(function(){
+                //碰撞
+                speedY++;
+                var l=obj.offsetLeft+speedX;
+                var t=obj.offsetTop+speedY;
+                if(t>document.documentElement.clientHeight-obj.offsetHeight){
+                    t=document.documentElement.clientHeight-obj.offsetHeight
+                    speedY*=-0.7;//反向 +   Y衰减
+                    speedX*=0.7 //x 衰减
+                }else if(t<0){
+                    t=0;//限定
+                    speedY*=-0.7;//反向 +   衰减
+                    speedX*=0.7 // 衰减   万一重力反了呢
+                }
+                if(l>document.documentElement.clientWidth-obj.offsetWidth){
+                    l=document.documentElement.clientWidth-obj.offsetWidth;
+                    speedX*=-0.7;//反向+   衰减
+                    speedY*=0.7//衰减 万一重力横过来了呢
+                }else if(l<0){
+                    l=0//限定
+                    speedX*=-0.7;//反向+   衰减
+                    speedY*=0.7//衰减 万一重力横过来了呢
+                }
+                //动
+                obj.style.left=l+'px';
+                obj.style.top=t+'px';
+
+                if(Math.abs(speedX)<1) speedX=0;
+                if(Math.abs(speedY)<1) speedY=0;
+                if(speedX==0 && speedY==0 && document.documentElement.clientHeight-obj.offsetHeight==obj.offsetTop){//条件?
+                    clearInterval(obj.timer);
+                    obj.parentNode.removeChild(obj);
+                }
+                //console.log(speedX,speedY);
+            },30);
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

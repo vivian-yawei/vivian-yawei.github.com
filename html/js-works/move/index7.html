@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>路径菜单运动</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 微软雅黑;
+        }
+
+        #div1 {
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            left: 20%;
+            top: 10%;
+            border-radius: 50%;
+            border: solid 1px #000;
+        }
+        input{
+            position: absolute;left:45%;top:45%;
+            font-size: 200%}
+
+        .box {
+            width: 20px;
+            height: 20px;
+            background: red;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin-left: -10px;
+            margin-top:-10px;
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            var oDiv = document.getElementById('div1');
+            var oBtn = document.getElementById('btn1');
+            var aBox=document.getElementsByClassName('box');
+            var r = oDiv.offsetWidth / 2;
+            var bl=true;
+
+            var count=5;
+            for(var i=0;i<count;i++){
+                var oBox=document.createElement('div');
+                oBox.className='box';
+                document.body.appendChild(oBox);
+                oBox.innerHTML=i;
+                setPos(oBox,0);
+                oBox.rotate=0;//设置默认0度的自定义属性rotate
+            }
+            oBtn.onclick=function(){
+                if(bl){
+                    for(var i=0;i<aBox.length;i++){
+                        //setPos(aBox[i],i*90/(count-1));
+                        move(aBox[i],i*90/(count-1));
+                    }
+                    bl=false;
+                }else{
+                    for(var i=0;i<aBox.length;i++){
+                        //setPos(aBox[i],0);
+                        move(aBox[i],0);
+                    }
+                    bl=true;
+                }
+            };
+
+            function move(obj,iTarget){
+                var start=obj.rotate;
+                var dis=iTarget-start;
+                var count=Math.round(1000/30);
+                var n=0;
+
+                clearInterval(obj.timer);
+                obj.timer=setInterval(function(){
+                    n++;
+
+                    var a=1-n/count;
+                    var cur=start+dis*(1-a*a*a);//每一步出来的角度
+
+                    setPos(obj,cur);
+                    obj.rotate=cur;//更新每一个小盒子的rotate
+
+                    if(n==count){
+                        clearInterval(obj.timer);
+                    }
+                },30);
+            }
+
+            function setPos(obj,ang){
+                var a = Math.sin(a2r(ang)) * r;
+                var b = Math.cos(a2r(ang)) * r;
+                obj.style.left = oDiv.offsetLeft + r + a + 'px';
+                obj.style.top = oDiv.offsetTop + r - b + 'px';
+            }
+
+            function a2r(n){//角转弧
+                return n*Math.PI/180;
+            }
+
+        };
+    </script>
+</head>
+<body>
+
+
+<div id="div1">
+    <input type="button" value="+" id="btn1">
+</div>
+
+</body>
+</html>
